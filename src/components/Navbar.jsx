@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function Navbar() {
   return (
-    <div className="w-full flex justify-center items-center h-[4.5rem] py-3 fixed backdrop-blur-md bg-navbar">
+    <div className="w-full flex justify-center items-center h-[4.5rem] py-3 fixed backdrop-blur-md bg-navbar z-50">
       <div className="flex max-w-[1440px] w-full justify-between items-center self-stretch px-2">
         {/* logo */}
         <a href="#" className="flex items-center">
@@ -50,7 +50,9 @@ export default function Navbar() {
 
         {/* CTA button */}
         <div className="flex justify-center items-center gap-1">
-          <Button children={"Book a Call"} />
+          <span className="hidden sm:flex">
+            <Button children={"Book a Call"} />
+          </span>
           <button
             className="flex px-3 py-2.5 justify-center items-center bg-menu border border-zinc-400/5 text-zinc-500 hover:text-zinc-50 backdrop-blur-[20px] rounded-2xl transition-colors cursor-pointer"
             onClick={() => console.log("cliked")}
