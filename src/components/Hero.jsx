@@ -26,11 +26,12 @@ export default function Hero() {
             children={"Let’s Talk"}
             url={"#contact"}
             className="w-full md:w-fit"
+            bgColor="bg-surface-brand"
           />
         </div>
       </div>
       {/* video or image section */}
-      <img src="/public/Embed.png" alt="Hero Image" />
+      <img src="/src/assets/Embed.png" alt="Hero Image" />
     </div>
   );
 }

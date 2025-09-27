@@ -21,6 +21,7 @@ export default function OurProject() {
             children={"Browse Projects"}
             url={"#projects"}
             className="w-full md:w-fit"
+            bgColor="bg-surface-brand"
           />
         </div>
       </div>

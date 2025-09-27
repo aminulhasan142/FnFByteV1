@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="flex max-w-[1440px] w-full justify-between items-center self-stretch px-2">
         {/* logo */}
         <a href="#" className="flex items-center">
-          <img src="/public/logo.svg" alt="logo" />
+          <img src="/src/assets/logo.svg" alt="logo" />
           <div className="flex justify-center items-center px-4 py-3 rounded-2xl">
             <span className="text-white font-poppins text-lg font-bold leading-[1.8rem]">
               FnF
@@ -51,7 +51,7 @@ export default function Navbar() {
         {/* CTA button */}
         <div className="flex justify-center items-center gap-1">
           <span className="hidden sm:flex">
-            <Button children={"Book a Call"} />
+            <Button children={"Book a Call"} bgColor="bg-surface-brand" />
           </span>
           <button
             className="flex px-3 py-2.5 justify-center items-center bg-menu border border-zinc-400/5 text-zinc-500 hover:text-zinc-50 backdrop-blur-[20px] rounded-2xl transition-colors cursor-pointer"

@@ -1,5 +1,5 @@
-import Button from "/src/components/Button.jsx";
-import TransparentButton from "/src/components/TransparentButton.jsx";
+import Button from "./Button";
+import TransparentButton from "./TransparentButton";
 
 export default function WhoWeAre() {
   return (
@@ -40,9 +40,9 @@ export default function WhoWeAre() {
               <div className="flex w-[140px] flex-col justify-center items-start gap-2">
                 {/* <!-- Avatar groups icons --> */}
                 <div className="flex justify-end">
-                  <img src="/public/placeholder.png" alt="Avatar" />
+                  <img src="/src/assets/placeholder.png" alt="Avatar" />
                   <img
-                    src="/public/placeholder (1).png"
+                    src="/src/assets/placeholder (1).png"
                     alt="Avatar"
                     className="-ml-[10px]"
                   />
@@ -65,9 +65,9 @@ export default function WhoWeAre() {
               <div className="flex w-[140px] flex-col justify-center items-start gap-2">
                 {/* <!-- Flag groups icons --> */}
                 <div className="flex justify-end">
-                  <img src="/public/placeholder (2).png" alt="Flag" />
+                  <img src="/src/assets/placeholder (2).png" alt="Flag" />
                   <img
-                    src="/public/placeholder (3).png"
+                    src="/src/assets/placeholder (3).png"
                     alt="Flag"
                     className="-ml-[10px]"
                   />
@@ -109,6 +109,7 @@ export default function WhoWeAre() {
               children={"What We Do"}
               url={"#letstalk"}
               className="w-full md:w-fit"
+              bgColor="bg-surface-brand"
             />
           </div>
         </div>
