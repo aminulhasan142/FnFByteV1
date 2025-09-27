@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
       </div>
       {/* video or image section */}
-      <img src="/src/assets/Embed.png" alt="Hero Image" />
+      <img src="/public/Embed.png" alt="Hero Image" />
     </div>
   );
 }

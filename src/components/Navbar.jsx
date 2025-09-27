@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="flex max-w-[1440px] w-full justify-between items-center self-stretch px-2">
         {/* logo */}
         <a href="#" className="flex items-center">
-          <img src="/src/assets/logo.svg" alt="logo" />
+          <img src="/public/logo.svg" alt="logo" />
           <div className="flex justify-center items-center px-4 py-3 rounded-2xl">
             <span className="text-white font-poppins text-lg font-bold leading-[1.8rem]">
               FnF

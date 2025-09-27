@@ -40,9 +40,9 @@ export default function WhoWeAre() {
               <div className="flex w-[140px] flex-col justify-center items-start gap-2">
                 {/* <!-- Avatar groups icons --> */}
                 <div className="flex justify-end">
-                  <img src="/src/assets/placeholder.png" alt="Avatar" />
+                  <img src="/public/placeholder.png" alt="Avatar" />
                   <img
-                    src="/src/assets/placeholder (1).png"
+                    src="/public/placeholder (1).png"
                     alt="Avatar"
                     className="-ml-[10px]"
                   />
@@ -65,9 +65,9 @@ export default function WhoWeAre() {
               <div className="flex w-[140px] flex-col justify-center items-start gap-2">
                 {/* <!-- Flag groups icons --> */}
                 <div className="flex justify-end">
-                  <img src="/src/assets/placeholder (2).png" alt="Flag" />
+                  <img src="/public/placeholder (2).png" alt="Flag" />
                   <img
-                    src="/src/assets/placeholder (3).png"
+                    src="/public/placeholder (3).png"
                     alt="Flag"
                     className="-ml-[10px]"
                   />
@@ -95,7 +95,7 @@ export default function WhoWeAre() {
         </div>
         {/* text container */}
         <div className="flex flex-col items-start gap-8 self-stretch">
-          <p className="text-[2rem] not-italic font-bold leading-normal bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent">
+          <p className="text-[2rem] not-italic font-bold leading-none md:leading-normal bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent">
             FnFByte is a forward-thinking technology company dedicated to
             transformaxg ideas into impactful digital solutions.
           </p>
