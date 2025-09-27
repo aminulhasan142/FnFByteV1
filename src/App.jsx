@@ -6,11 +6,11 @@ export default function App() {
   return (
     <div className="flex justify-center">
       <Navbar />
-      <div className="px-2 gap-2">
+      <div className="flex flex-col px-2 gap-2">
         <div className="mt-[72px] flex max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-center rounded-3xl bg-linear-[180deg] from-container-gray1 to-container-gray2">
           <Hero />
         </div>
-        <div className="flex max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-center rounded-3xl bg-linear-[180deg] from-container-gray1 to-container-gray2">
+        <div className="flex flex-col md:flex-row max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-between items-center rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray2 gap-4">
           <WhoWeAre />
         </div>
       </div>
