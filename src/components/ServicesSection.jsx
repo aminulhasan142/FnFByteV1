@@ -89,49 +89,64 @@ export default function ServicesSection() {
               </p>
             </div>
             {/* gig title heading */}
-            <div className="flex flex-col items-start gap-5 self-stretch">
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+            <div className="flex flex-col w-full items-start gap-5 self-stretch">
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   UX Research
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Wireframe & Prototyping
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Visual UI Design
-                </p>
+                </h2>
                 <PopularTag />
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Interaction Design
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Design System
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   UX Audit
-                </p>
+                </h2>
                 <PopularTag />
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Redesign Web/App
-                </p>
+                </h2>
                 <PopularTag />
               </div>
-              <div className="w-full py-3 border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   AI Product Design
-                </p>
+                </h2>
                 <PopularTag />
               </div>
             </div>
@@ -172,38 +187,41 @@ export default function ServicesSection() {
               </p>
             </div>
             {/* gig title heading */}
-            <div className="flex flex-col items-start gap-5 self-stretch">
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+            <div className="flex flex-col w-full items-start gap-5 self-stretch">
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Mobile App Development
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Web Development
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Shopify Development
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Wordpress Development
-                </p>
+                </h2>
                 <PopularTag />
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   MVPs & SaaS Platforms
-                </p>
-                <PopularTag />
-              </div>
-              <div className="w-full py-3  border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
-                  Dashboards & Landing Pages
-                </p>
+                </h2>
                 <PopularTag />
               </div>
             </div>
@@ -244,27 +262,34 @@ export default function ServicesSection() {
               </p>
             </div>
             {/* gig title heading */}
-            <div className="flex flex-col items-start gap-5 self-stretch">
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+            <div className="flex flex-col w-full items-start gap-5 self-stretch">
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Predictive Analytics
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   AI-Powered Chatbots
-                </p>
+                </h2>
                 <PopularTag />
               </div>
-              <div className="w-full py-3 border-b border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   Data-Driven Dashboards
-                </p>
+                </h2>
               </div>
-              <div className="w-full py-3  border-[#ffffff0d] flex justify-between">
-                <p className="text-xl lg:text-2xl font-semibold text-white ">
+              <span className="w-full border-b border-border"></span>
+              {/* topic title */}
+              <div className="flex w-full justify-between items-center">
+                <h2 className="text-white text-lg not-italic font-bold">
                   ML Tools & Automation
-                </p>
+                </h2>
               </div>
             </div>
           </div>
