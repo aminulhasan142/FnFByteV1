@@ -1,5 +1,6 @@
 import Button from "./Button";
 import TransparentButton from "./TransparentButton";
+import BlurElement from "/src/assets/BlurElement.jsx";
 
 export default function Hero() {
   return (
@@ -17,7 +18,7 @@ export default function Hero() {
           </p>
         </div>
         {/* title CTA */}
-        <div className="flex flex-col md:flex-row w-full items-center gap-2">
+        <div className="flex flex-col md:flex-row w-full items-center gap-2 relative">
           <TransparentButton
             children={"Starting at $500/Project"}
             className="w-full md:w-fit"
@@ -28,6 +29,9 @@ export default function Hero() {
             className="w-full md:w-fit"
             bgColor="bg-surface-brand"
           />
+          <span className="hidden lg:flex absolute -z-10 ">
+            <BlurElement />
+          </span>
         </div>
       </div>
       {/* video or image section */}

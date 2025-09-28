@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import OurProject from "./components/OurProject";
+import PricingSection from "./components/PricingSection";
 import ProjectShowCard from "./components/ProjectShowCard";
 import ProjectShowCard01 from "./components/ProjectShowCard01";
 import ProjectShowCard02 from "./components/ProjectShowCard02";
@@ -41,6 +42,9 @@ export default function App() {
 
         {/* Service Section */}
         <ServicesSection />
+
+        {/* Pricing Section */}
+        <PricingSection />
       </div>
     </div>
   );
