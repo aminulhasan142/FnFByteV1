@@ -21,9 +21,9 @@ export default function BlurElement() {
           width="448.107"
           height="433.074"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -43,8 +43,8 @@ export default function BlurElement() {
           y2="105.827"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FAB2FF" />
-          <stop offset="1" stop-color="#1904E5" />
+          <stop stopColor="#FAB2FF" />
+          <stop offset="1" stopColor="#1904E5" />
         </linearGradient>
       </defs>
     </svg>

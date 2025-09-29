@@ -1,6 +1,7 @@
 import { MdDone, MdOutlineMonetizationOn } from "react-icons/md";
 import HeadingGradientText from "./HeadingGradientText";
 import TagText from "./TagText";
+import PopularTag from "/src/assets/PopularTag.jsx";
 
 export default function PricingSection() {
   return (
@@ -31,7 +32,7 @@ export default function PricingSection() {
       </div>
 
       {/* pricing cards */}
-      <div className="flex flex-col lg:flex-row items-center gap-1 self-stretch">
+      <div className="flex flex-col max-w-[1440px] w-full lg:flex-row items-center gap-1 self-stretch">
         {/* 1st card */}
         <div className="flex p-6 md:p-12 lg:p-16 flex-col items-center gap-4 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray2 from-0% to-container-gray1 to-100% relative">
           <div className="flex justify-start w-full items-center">
@@ -108,11 +109,12 @@ export default function PricingSection() {
 
         {/* 2nd card */}
         <div className="flex p-6 md:p-12 lg:p-16 flex-col items-center gap-4 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray2 from-0% to-container-gray1 to-100% relative">
-          <div className="flex justify-start w-full items-center">
-            <img src="/src/assets/LightIcon.svg" alt="Light" />
+          <div className="flex justify-between w-full items-center">
+            <img src="/src/assets/TargetIcon.svg" alt="Target Icon" />
+            <PopularTag className="-mt-15 lg:-mt-20 -mr-3 lg:-mr-8" />
           </div>
           <img
-            src="/src/assets/Ellipse.svg"
+            src="/src/assets/vector2.svg"
             alt="vector"
             className="flex absolute right-0.5 -z-10"
           />
@@ -120,17 +122,17 @@ export default function PricingSection() {
           <div className="flex flex-col items-start gap-6 self-stretch">
             <div className="flex flex-col items-start gap-1 self-stretch">
               <h3 className="text-zinc-200 text-2xl font-black">
-                Pay as you go
+                Project Wise
               </h3>
               <p className="text-slate-400 text-sm font-poppins font-normal">
-                Small Projects, Quick Turnaround
+                Single Projects, Startups
               </p>
             </div>
           </div>
           {/* Pricing text */}
           <div className="flex w-full justify-start items-center">
             <h1 className="text-white font-poppins text-3xl font-bold">
-              $40
+              $1500
               <span className="text-white font-poppins text-sm font-normal ">
                 /HOUR
               </span>
@@ -139,7 +141,7 @@ export default function PricingSection() {
           {/* cta button */}
           <a
             href="#call"
-            className="flex py-3 px-6 justify-center items-center self-stretch rounded-xl border border-border bg-container-gray2 text-white text-sm font-bold font-poppins"
+            className="flex py-3 px-6 justify-center items-center self-stretch rounded-xl bg-surface-brand border border-border  text-white text-sm font-bold font-poppins"
           >
             Book a Call
           </a>
@@ -153,28 +155,28 @@ export default function PricingSection() {
             <div className="flex items-center gap-2.5 self-stretch justify-start ">
               <MdDone className="bg-emerald-900 rounded-full text-white p-1" />
               <p className="text-sm font-poppins font-semibold text-white">
-                Flexible pricing for short-term projects.
+                Fixed-price projects
               </p>
             </div>
             {/* offer 2 */}
             <div className="flex items-center gap-2.5 self-stretch justify-start ">
               <MdDone className="bg-emerald-900 rounded-full text-white p-1" />
               <p className="text-sm font-poppins font-semibold text-white">
-                Pay only for the hours you need.
+                Clear project scope and timeline
               </p>
             </div>
             {/* offer 3 */}
             <div className="flex items-center gap-2.5 self-stretch justify-start ">
               <MdDone className="bg-emerald-900 rounded-full text-white p-1" />
               <p className="text-sm font-poppins font-semibold text-white">
-                No long-term commitments
+                Daily updates and regular communication
               </p>
             </div>
             {/* offer 4 */}
             <div className="flex items-center gap-2.5 self-stretch justify-start ">
               <MdDone className="bg-emerald-900 rounded-full text-white p-1" />
               <p className="text-sm font-poppins font-semibold text-white">
-                Ideal for one-off tasks or small-scale projects.
+                Ideal for businesses with defined project needs
               </p>
             </div>
           </div>
@@ -183,28 +185,26 @@ export default function PricingSection() {
         {/* 3rd card */}
         <div className="flex p-6 md:p-12 lg:p-16 flex-col items-center gap-4 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray2 from-0% to-container-gray1 to-100% relative">
           <div className="flex justify-start w-full items-center">
-            <img src="/src/assets/LightIcon.svg" alt="Light" />
+            <img src="/src/assets/kingIcon.svg" alt="Light" />
           </div>
           <img
-            src="/src/assets/Ellipse.svg"
+            src="/src/assets/vector3.svg"
             alt="vector"
             className="flex absolute right-0.5 -z-10"
           />
           {/* Card body text title*/}
           <div className="flex flex-col items-start gap-6 self-stretch">
             <div className="flex flex-col items-start gap-1 self-stretch">
-              <h3 className="text-zinc-200 text-2xl font-black">
-                Pay as you go
-              </h3>
+              <h3 className="text-zinc-200 text-2xl font-black">Enterprise</h3>
               <p className="text-slate-400 text-sm font-poppins font-normal">
-                Small Projects, Quick Turnaround
+                Agencies, SaaS products
               </p>
             </div>
           </div>
           {/* Pricing text */}
           <div className="flex w-full justify-start items-center">
             <h1 className="text-white font-poppins text-3xl font-bold">
-              $40
+              $5000
               <span className="text-white font-poppins text-sm font-normal ">
                 /HOUR
               </span>
@@ -227,28 +227,28 @@ export default function PricingSection() {
             <div className="flex items-center gap-2.5 self-stretch justify-start ">
               <MdDone className="bg-emerald-900 rounded-full text-white p-1" />
               <p className="text-sm font-poppins font-semibold text-white">
-                Flexible pricing for short-term projects.
+                Dedicated project manager
               </p>
             </div>
             {/* offer 2 */}
             <div className="flex items-center gap-2.5 self-stretch justify-start ">
               <MdDone className="bg-emerald-900 rounded-full text-white p-1" />
               <p className="text-sm font-poppins font-semibold text-white">
-                Pay only for the hours you need.
+                Unlimited works, meetings and support
               </p>
             </div>
             {/* offer 3 */}
             <div className="flex items-center gap-2.5 self-stretch justify-start ">
               <MdDone className="bg-emerald-900 rounded-full text-white p-1" />
               <p className="text-sm font-poppins font-semibold text-white">
-                No long-term commitments
+                Priority access to our team
               </p>
             </div>
             {/* offer 4 */}
             <div className="flex items-center gap-2.5 self-stretch justify-start ">
               <MdDone className="bg-emerald-900 rounded-full text-white p-1" />
               <p className="text-sm font-poppins font-semibold text-white">
-                Ideal for one-off tasks or small-scale projects.
+                Custom solutions tailored to your specific needs
               </p>
             </div>
           </div>

@@ -7,6 +7,7 @@ import ProjectShowCard01 from "./components/ProjectShowCard01";
 import ProjectShowCard02 from "./components/ProjectShowCard02";
 import ProjectShowCard03 from "./components/ProjectShowCard03";
 import ServicesSection from "./components/ServicesSection";
+import TestimonialSection from "./components/TestimonialSection";
 import WhoWeAre from "./components/WhoWeAre";
 
 export default function App() {
@@ -45,6 +46,9 @@ export default function App() {
 
         {/* Pricing Section */}
         <PricingSection />
+
+        {/* Testimonial Section */}
+        <TestimonialSection />
       </div>
     </div>
   );
