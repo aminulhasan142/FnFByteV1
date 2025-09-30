@@ -1,4 +1,5 @@
 import ArticleSection from "./components/ArticleSection";
+import ContactForm from "./components/ContactSection";
 import FaqSection from "./components/FaqSection";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -57,6 +58,9 @@ export default function App() {
 
         {/* FAQ section */}
         <FaqSection />
+
+        {/* Contact Section */}
+        <ContactForm />
       </div>
     </div>
   );

@@ -29,15 +29,23 @@ const QuestionList = [
 ];
 
 export default function FaqSection() {
-  const [arrow, setArrow] = useState(false);
+  const [arrow, setArrow] = useState(QuestionList);
 
-  function handleClick() {
-    setArrow(!arrow);
+  function handleClick(questionID) {
+    setArrow(
+      arrow.map((q) => {
+        if (q.id === questionID) {
+          return { ...q, status: !q.status };
+        } else {
+          return q;
+        }
+      })
+    );
   }
   return (
     <>
       {/* FAQ section */}
-      <div className="flex max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-3">
+      <div className="flex flex-col lg:flex-row max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-3">
         {/* first part  */}
         <div className="flex flex-col justify-center items-start gap-1 self-stretch">
           <TagText text="FAQs">
@@ -56,28 +64,30 @@ export default function FaqSection() {
 
         {/* second part */}
         <div className="flex flex-col items-start gap-2 w-full">
-          {QuestionList.map((e) => (
+          {arrow.map((q) => (
             <div
-              key={e.id}
+              key={q.id}
               className="flex p-6 items-center gap-4 self-stretch rounded-2xl border border-border cursor-pointer justify-between"
-              onClick={(e) => handleClick(e)}
+              onClick={() => {
+                handleClick(q.id);
+              }}
             >
               {/* question and answer */}
               <div className="flex flex-col items-start gap-1">
                 <h1 className="text-white text-xl font-poppins font-bold">
-                  {e.question}
+                  {q.question}
                 </h1>
                 <p
                   className={`text-slate-400 font-poppins text-sm font-normal ${
-                    arrow ? "flex" : "hidden"
+                    q.status ? "flex" : "hidden"
                   }`}
                 >
-                  {e.answer}
+                  {q.answer}
                 </p>
               </div>
               {/* icons */}
               <span className="flex p-2 items-center justify-center rounded-full bg-container-gray2">
-                {arrow ? (
+                {q.status ? (
                   <IoIosArrowUp className="text-white" />
                 ) : (
                   <IoIosArrowDown className="text-white" />
