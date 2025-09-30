@@ -1,6 +1,7 @@
 import ArticleSection from "./components/ArticleSection";
 import ContactForm from "./components/ContactSection";
 import FaqSection from "./components/FaqSection";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import OurProject from "./components/OurProject";
@@ -61,6 +62,9 @@ export default function App() {
 
         {/* Contact Section */}
         <ContactForm />
+
+        {/* Footer Section */}
+        <Footer />
       </div>
     </div>
   );
