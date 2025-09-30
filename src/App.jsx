@@ -1,3 +1,5 @@
+import ArticleSection from "./components/ArticleSection";
+import FaqSection from "./components/FaqSection";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import OurProject from "./components/OurProject";
@@ -49,6 +51,12 @@ export default function App() {
 
         {/* Testimonial Section */}
         <TestimonialSection />
+
+        {/* Article Section */}
+        <ArticleSection />
+
+        {/* FAQ section */}
+        <FaqSection />
       </div>
     </div>
   );
