@@ -3,6 +3,7 @@ import ContactForm from "./components/ContactSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import MenuContent from "./components/MenuContent";
 import Navbar from "./components/Navbar";
 import OurProject from "./components/OurProject";
 import PricingSection from "./components/PricingSection";
@@ -16,56 +17,61 @@ import WhoWeAre from "./components/WhoWeAre";
 
 export default function App() {
   return (
-    <div className="flex justify-center">
-      <Navbar />
-      <div className="flex flex-col px-2 gap-2">
-        <div className="mt-[72px] flex max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-center rounded-3xl bg-linear-[180deg] from-container-gray1 to-container-gray2">
-          <Hero />
-        </div>
-        <div className="flex flex-col lg:flex-row max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-between items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray2 gap-4">
-          <WhoWeAre />
-        </div>
-        <div className="flex flex-col max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-3">
-          <OurProject />
-        </div>
-        {/* Project Cards */}
-        <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#BF6235] from-0% to-[#7A4A42] to-100%">
-          <ProjectShowCard />
-        </div>
-        {/* Project Cards 01*/}
-        <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#16FFE2] from-0% via-[#2A99F3] via-17% to-[#0A02E7] to-100%">
-          <ProjectShowCard01 />
-        </div>
-        {/* Project Cards 02*/}
-        <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#02ACCA] from-0% to-[#026691] to-100%">
-          <ProjectShowCard02 />
-        </div>
-        {/* Project Cards 03*/}
-        <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full rounded-3xl bg-linear-[135deg] from-[#6B73FF] from-0% to-[#000DFF] to-100%">
-          <ProjectShowCard03 />
-        </div>
+    <>
+      <div className="flex justify-center">
+        <Navbar />
+        <div className="flex flex-col px-2 gap-2">
+          <div className="mt-[72px] flex max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-center rounded-3xl bg-linear-[180deg] from-container-gray1 to-container-gray2">
+            <Hero />
+          </div>
+          <div className="flex flex-col lg:flex-row max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-between items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray2 gap-4">
+            <WhoWeAre />
+          </div>
+          <div className="flex flex-col max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-3">
+            <OurProject />
+          </div>
+          {/* Project Cards */}
+          <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#BF6235] from-0% to-[#7A4A42] to-100%">
+            <ProjectShowCard />
+          </div>
+          {/* Project Cards 01*/}
+          <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#16FFE2] from-0% via-[#2A99F3] via-17% to-[#0A02E7] to-100%">
+            <ProjectShowCard01 />
+          </div>
+          {/* Project Cards 02*/}
+          <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#02ACCA] from-0% to-[#026691] to-100%">
+            <ProjectShowCard02 />
+          </div>
+          {/* Project Cards 03*/}
+          <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full rounded-3xl bg-linear-[135deg] from-[#6B73FF] from-0% to-[#000DFF] to-100%">
+            <ProjectShowCard03 />
+          </div>
 
-        {/* Service Section */}
-        <ServicesSection />
+          {/* Service Section */}
+          <ServicesSection />
 
-        {/* Pricing Section */}
-        <PricingSection />
+          {/* Pricing Section */}
+          <PricingSection />
 
-        {/* Testimonial Section */}
-        <TestimonialSection />
+          {/* Testimonial Section */}
+          <TestimonialSection />
 
-        {/* Article Section */}
-        <ArticleSection />
+          {/* Article Section */}
+          <ArticleSection />
 
-        {/* FAQ section */}
-        <FaqSection />
+          {/* FAQ section */}
+          <FaqSection />
 
-        {/* Contact Section */}
-        <ContactForm />
+          {/* Contact Section */}
+          <ContactForm />
 
-        {/* Footer Section */}
-        <Footer />
+          {/* Footer Section */}
+          <Footer />
+
+          {/* mega menu section */}
+          <MenuContent />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

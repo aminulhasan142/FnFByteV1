@@ -6,6 +6,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaBehance, FaXTwitter } from "react-icons/fa6";
+import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 export default function Footer() {
@@ -32,7 +33,7 @@ export default function Footer() {
             {/* download button */}
             <a
               href="#download"
-              className="flex py-3 pl-3 pr-4 gap-1 rounded-2xl bg-surface-brand justify-center items-center"
+              className="hidden lg:flex py-3 pl-3 pr-4 gap-1 rounded-2xl bg-surface-brand justify-center items-center"
             >
               <MdOutlineFileDownload className="text-white text-2xl" />
               <span className="font-poppins text-sm font-bold text-white">
@@ -42,7 +43,7 @@ export default function Footer() {
           </div>
 
           {/* body container */}
-          <div className="flex items-start gap-24 self-stretch">
+          <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-24 self-stretch">
             <div className="flex flex-col justify-center items-start gap-4">
               {/* text */}
               <p className="text-zinc-400 font-poppins font-normal text-sm">
@@ -50,7 +51,7 @@ export default function Footer() {
                 experiences that drive growth and success.
               </p>
               {/* logos container */}
-              <div className="flex justify-center items-center gap-2.5">
+              <div className="flex justify-start items-center gap-2.5 flex-wrap">
                 {/* twitter */}
                 <a
                   href="#twitter"
@@ -104,7 +105,7 @@ export default function Footer() {
             </div>
 
             {/* page link tab */}
-            <div className="flex justify-end items-start gap-2 self-stretch flex-wrap">
+            <div className="flex justify-start lg:justify-end items-start gap-2 self-stretch flex-wrap">
               <a
                 href="#home"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
@@ -158,6 +159,72 @@ export default function Footer() {
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Contact Us
+              </a>
+            </div>
+
+            {/* download button */}
+            <a
+              href="#download"
+              className="flex lg:hidden py-3 pl-3 pr-4 gap-1 rounded-2xl bg-surface-brand justify-center items-center"
+            >
+              <MdOutlineFileDownload className="text-white text-2xl" />
+              <span className="font-poppins text-sm font-bold text-white">
+                Company Deck
+              </span>
+            </a>
+          </div>
+
+          {/* More info container */}
+          <div className="flex flex-col items-start self-stretch">
+            <div className="flex py-4 items-center justify-between gap-4 self-stretch border-t border-t-border border-b border-b-border cursor-pointer">
+              <h2 className="text-white font-poppins text-xl font-bold">
+                Show All Services
+              </h2>
+              <span className="flex p-2 items-center justify-center gap-2.5 rounded-full bg-[#1E293B]">
+                <IoIosArrowDown className="text-white text-xl" />
+              </span>
+            </div>
+            <div className="flex py-4 items-center justify-between gap-4 self-stretch border-b border-b-border cursor-pointer">
+              <h2 className="text-white font-poppins text-xl font-bold">
+                Show All Services
+              </h2>
+              <span className="flex p-2 items-center justify-center gap-2.5 rounded-full bg-[#1E293B]">
+                <IoIosArrowDown className="text-white text-xl" />
+              </span>
+            </div>
+            <div className="flex py-4 items-center justify-between gap-4 self-stretch border-b border-b-border cursor-pointer">
+              <h2 className="text-white font-poppins text-xl font-bold">
+                Show All Services
+              </h2>
+              <span className="flex p-2 items-center justify-center gap-2.5 rounded-full bg-[#1E293B]">
+                <IoIosArrowDown className="text-white text-xl" />
+              </span>
+            </div>
+          </div>
+
+          {/* bottom footer */}
+          <div className="flex flex-col-reverse md:flex-row justify-between items-center self-stretch gap-4 md:gap-0">
+            <span className="text-zinc-400 font-poppins text-sm font-normal">
+              © 2025 FnFByte - All Right Reserved
+            </span>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="#ManageCookies"
+                className="text-zinc-400 font-poppins text-sm font-normal"
+              >
+                Manage Cookies
+              </a>
+              <a
+                href="#terms"
+                className="text-zinc-400 font-poppins text-sm font-normal"
+              >
+                Terms & Conditions
+              </a>
+              <a
+                href="#privacy"
+                className="text-zinc-400 font-poppins text-sm font-normal"
+              >
+                Privacy Policy
               </a>
             </div>
           </div>
