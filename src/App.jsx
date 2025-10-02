@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import ArticleSection from "./components/ArticleSection";
 import ContactForm from "./components/ContactSection";
 import FaqSection from "./components/FaqSection";
@@ -16,10 +17,30 @@ import TestimonialSection from "./components/TestimonialSection";
 import WhoWeAre from "./components/WhoWeAre";
 
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  // Optional: Prevent scrolling when the menu is open (good practice)
+  React.useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto"; // Cleanup
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
       <div className="flex justify-center">
-        <Navbar />
+        <Navbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+        {/* mega menu section */}
+        <MenuContent toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
         <div className="flex flex-col px-2 gap-2">
           <div className="mt-[72px] flex max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-center rounded-3xl bg-linear-[180deg] from-container-gray1 to-container-gray2">
             <Hero />

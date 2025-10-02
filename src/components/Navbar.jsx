@@ -1,9 +1,10 @@
 import { IoMdArrowDropdown, IoMdMenu } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
 import Button from "./Button";
 
-export default function Navbar() {
+export default function Navbar({ toggleMenu, isMenuOpen }) {
   return (
-    <div className="w-full flex justify-center items-center h-[4.5rem] py-3 fixed backdrop-blur-md bg-navbar z-50">
+    <nav className="w-full flex justify-center items-center h-[4.5rem] py-3 fixed backdrop-blur-md bg-navbar z-50">
       <div className="flex max-w-[1440px] w-full justify-between items-center self-stretch px-2">
         {/* logo */}
         <a href="#" className="flex items-center">
@@ -55,12 +56,19 @@ export default function Navbar() {
           </span>
           <button
             className="flex px-3 py-2.5 justify-center items-center bg-menu border border-zinc-400/5 text-zinc-500 hover:text-zinc-50 backdrop-blur-[20px] rounded-2xl transition-colors cursor-pointer"
-            onClick={() => console.log("cliked")}
+            onClick={() => {
+              toggleMenu();
+              console.log(isMenuOpen);
+            }}
           >
-            <IoMdMenu className="text-2xl" />
+            {isMenuOpen ? (
+              <RxCross2 className="text-2xl" />
+            ) : (
+              <IoMdMenu className="text-2xl" />
+            )}
           </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
