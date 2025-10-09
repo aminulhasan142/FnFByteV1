@@ -12,7 +12,7 @@ export default function MenuContent({ isMenuOpen }) {
   return (
     <div
       className={`w-full h-full bg-cyan-950 backdrop-blur-lg fixed
-      } top-2 z-30 mt-18 transition-transform duration-300 ease-in-out transform 
+      } top-2 z-30 mt-16 transition-transform duration-300 ease-in-out transform 
           ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
     >
       <div className="flex max-w-[1440px] flex-col-reverse md:flex-row-reverse lg:flex-row px-8 lg:px-16 items-start justify-between">

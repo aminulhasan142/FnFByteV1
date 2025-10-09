@@ -5,7 +5,7 @@ export default function WhoWeAre() {
   return (
     <>
       {/* 1st container */}
-      <div className="flex max-w-[600px] p-8 flex-col justify-center items-start self-stretch rounded-2xl bg-slate-800 flex-2">
+      <div className="flex w-full lg:max-w-[600px] p-8 flex-col justify-center items-start self-stretch rounded-2xl bg-slate-800 flex-2">
         {/* <!-- first row 1 for statistics --> */}
         <div className="flex flex-col justify-around items-center flex-2 self-stretch">
           {/* <!-- box 1 --> */}

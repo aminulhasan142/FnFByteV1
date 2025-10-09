@@ -20,6 +20,26 @@
   .moving_arrow_button div span:nth-child(1)::before {
     position: relative;
     transition: 200ms;
+    transform: translate(1rem, -1rem);
+  }
+  .moving_arrow_button:hover div span:nth-child(1) {
+    position: relative;
+    transition: 200ms;
+    transform: translate(1.6rem, -1.6rem);
+  }
+  .moving_arrow_button div span:nth-child(2)::before {
+    position: relative;
+    transition: 200ms;
+    transform: translate(1rem, -1rem);
+  }
+  .moving_arrow_button:hover div span:nth-child(2) {
+    position: relative;
+    transition: 200ms;
+    transform: translate(1.8rem, -1.8rem);
+  }
+  /* .moving_arrow_button div span:nth-child(1)::before {
+    position: relative;
+    transition: 200ms;
     transform: translate(1.5rem, -1.5rem);
   }
   .moving_arrow_button:hover div span:nth-child(1) {
@@ -36,5 +56,5 @@
     position: relative;
     transition: 200ms;
     transform: translate(1.5rem, -1.5rem);
-  }
+  } */
 }

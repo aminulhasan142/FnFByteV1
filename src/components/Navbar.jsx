@@ -1,5 +1,6 @@
 import { IoMdArrowDropdown, IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 export default function Navbar({ toggleMenu, isMenuOpen }) {
@@ -30,14 +31,16 @@ export default function Navbar({ toggleMenu, isMenuOpen }) {
             </span>
             <IoMdArrowDropdown />
           </a>
-          <a
-            href="#"
+
+          <Link
+            to="/work"
             className="flex items-center py-1 pl-2 pr-4 gap-1 text-zinc-400 hover:text-zinc-50 hover:transition-colors"
           >
             <span className="font-poppins text-sm font-bold leading-5 ">
               WORKS
             </span>
-          </a>
+          </Link>
+
           <a
             href="#"
             className="flex items-center p-1 gap-1 text-zinc-400 hover:text-zinc-50 hover:transition-colors"

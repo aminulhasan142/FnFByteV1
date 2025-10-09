@@ -11,8 +11,8 @@ import { MdOutlineFileDownload } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <>
-      <div className="flex flex-col max-w-[1440px] w-full p-6 md:p-12 lg:p-16 justify-center items-start rounded-3xl gap-6 bg-linear-[180deg] from-container-gray2 to-container-gray1">
+    <footer className="w-full justify-center flex">
+      <div className="flex flex-col max-w-[1440px] w-full p-6 md:p-12 lg:p-16 justify-center items-start self-center rounded-3xl gap-6 bg-linear-[180deg] from-container-gray2 to-container-gray1">
         {/* favicon and contacts container */}
         <div className="flex flex-col items-start gap-5 self-stretch">
           {/* logo container */}
@@ -230,6 +230,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </footer>
   );
 }
