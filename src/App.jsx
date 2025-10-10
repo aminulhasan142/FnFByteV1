@@ -1,7 +1,7 @@
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import Layout from "./Layout";
-import Home from "./Pages/home";
-import Work from "./Pages/work";
+import Home from "./Pages/Home";
+import Work from "./Pages/Work";
 
 export default function App() {
   return (
