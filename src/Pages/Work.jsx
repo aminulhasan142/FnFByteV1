@@ -8,7 +8,7 @@ import TagText from "../components/TagText";
 export default function Work() {
   return (
     <div className="pt-16 flex w-full justify-center px-2">
-      <div className="flex max-w-[1440px] px-16 pt-20 flex-col justify-center items-center gap-3">
+      <div className="flex max-w-[1440px] px-8 lg:px-16 pt-12 lg:pt-20 flex-col justify-center items-center gap-3">
         {/* page pagination */}
         <div className="flex py-2.5 px-4 justify-center items-center gap-1 border border-border rounded-full">
           <Link
@@ -33,9 +33,47 @@ export default function Work() {
 
         {/* Case Studies Main Container */}
 
-        <div className="flex w-full items-start gap-1 self-start py-24">
+        <div className="flex flex-col lg:flex-row w-full overflow-hidden items-start gap-1 self-start py-16 lg:py-24">
           {/* sticky container for filtering  */}
-          <div className="max-w-[30%] sticky top-[72px] flex flex-col p-8 items-start self-start gap-8 rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
+
+          {/* content box for small screen */}
+          <div className="flex lg:hidden max-w-[320px] sm:max-w-[480px] md:max-w-[720px] justify-center items-center">
+            <div className="flex overflow-x-auto whitespace-nowrap space-x-4 p-2">
+              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                All Services
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                MVP(12)
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                UI/UX Design(25)
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                Mobile App Development(2)
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                Web Development(13)
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center  border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                SaaS(7)
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center  border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                AI/ML (5)
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                Healthcare(2)
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center  border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                Edtech(3)
+              </button>
+              <button className="flex px-5 py-3 justify-center items-center  border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                Others(4)
+              </button>
+            </div>
+          </div>
+
+          {/* content box for large screen */}
+          <div className="hidden lg:flex max-w-[30%] sticky top-[72px]  flex-col p-8 items-start self-start gap-8 rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
             {/* service section */}
             <div className="flex flex-col justify-center items-center gap-2.5 self-stretch">
               {/* title container */}
@@ -121,14 +159,14 @@ export default function Work() {
           </div>
 
           {/* card container */}
-          <div className="max-w-[70%] flex flex-col items-start gap-5 self-stretch">
+          <div className="w-[90%] lg:max-w-[70%] flex flex-col items-start gap-5 self-stretch">
             {/* 1st box */}
-            <div className="flex gap-1">
+            <div className="flex flex-col lg:flex-row w-full gap-1">
               {/* card 1 */}
               <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage1} alt="Card Image" />
+                <img src={CardImage1} alt="Card Image" className="w-full" />
                 <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap gap-1">
                     <TagText text={"UI/UX Design"} />
                     <TagText text={"Web App"} />
                     <TagText text={"AI/ML"} />
@@ -140,7 +178,7 @@ export default function Work() {
               </div>
               {/* card 2 */}
               <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage2} alt="Card Image" />
+                <img src={CardImage2} alt="Card Image" className="w-full" />
                 <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
                   <div className="flex flex-wrap">
                     <TagText text={"UI/UX Design"} />
@@ -154,12 +192,12 @@ export default function Work() {
               </div>
             </div>
             {/* 2nd box */}
-            <div className="flex gap-1">
+            <div className="flex flex-col lg:flex-row w-full gap-1">
               {/* card 3 */}
               <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage3} alt="Card Image" />
+                <img src={CardImage3} alt="Card Image" className="w-full" />
                 <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap gap-1">
                     <TagText text={"UI/UX Design"} />
                     <TagText text={"Web App"} />
                     <TagText text={"AI/ML"} />
@@ -171,9 +209,9 @@ export default function Work() {
               </div>
               {/* card 4 */}
               <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage1} alt="Card Image" />
+                <img src={CardImage1} alt="Card Image" className="w-full" />
                 <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap gap-1">
                     <TagText text={"UI/UX Design"} />
                     <TagText text={"Web App"} />
                     <TagText text={"AI/ML"} />
@@ -185,12 +223,12 @@ export default function Work() {
               </div>
             </div>
             {/* 3rd box */}
-            <div className="flex gap-1">
+            <div className="flex flex-col lg:flex-row w-full gap-1">
               {/* card 5 */}
               <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage2} alt="Card Image" />
+                <img src={CardImage2} alt="Card Image" className="w-full" />
                 <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap gap-1">
                     <TagText text={"UI/UX Design"} />
                     <TagText text={"Web App"} />
                     <TagText text={"AI/ML"} />
@@ -202,9 +240,9 @@ export default function Work() {
               </div>
               {/* card 6 */}
               <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage3} alt="Card Image" />
+                <img src={CardImage3} alt="Card Image" className="w-full" />
                 <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap gap-1">
                     <TagText text={"UI/UX Design"} />
                     <TagText text={"Web App"} />
                     <TagText text={"AI/ML"} />

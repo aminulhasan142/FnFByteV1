@@ -1,5 +1,4 @@
 import ArticleSection from "../components/ArticleSection";
-import ContactForm from "../components/ContactSection";
 import FaqSection from "../components/FaqSection";
 import Hero from "../components/Hero";
 import OurProject from "../components/OurProject";
@@ -57,9 +56,6 @@ export default function Home() {
 
           {/* FAQ section */}
           <FaqSection />
-
-          {/* Contact Section */}
-          <ContactForm />
         </div>
       </div>
     </>

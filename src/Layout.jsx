@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
+import ContactForm from "./components/ContactSection";
 import Footer from "./components/Footer";
 import MenuContent from "./components/MenuContent";
 import Navbar from "./components/Navbar";
@@ -30,6 +31,8 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
+      {/* Contact Section */}
+      <ContactForm />
       <Footer />
     </>
   );
