@@ -33,7 +33,7 @@ export default function Work() {
 
         {/* Case Studies Main Container */}
 
-        <div className="flex flex-col lg:flex-row w-full overflow-hidden items-start gap-1 self-start py-16 lg:py-24">
+        <div className="flex flex-col lg:flex-row w-full items-start gap-1 self-start py-16 lg:py-24">
           {/* sticky container for filtering  */}
 
           {/* content box for small screen */}
