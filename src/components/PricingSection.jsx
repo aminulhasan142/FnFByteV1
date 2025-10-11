@@ -1,10 +1,13 @@
 import { MdDone, MdOutlineMonetizationOn } from "react-icons/md";
 import HeadingGradientText from "./HeadingGradientText";
 import TagText from "./TagText";
+import VectorSvg from "/src/assets/Ellipse.svg";
 import LightIcon from "/src/assets/LightIcon.svg";
 import PopularTag from "/src/assets/PopularTag.jsx";
 import TargetIcon from "/src/assets/TargetIcon.svg";
 import KingIcon from "/src/assets/kingIcon.svg";
+import VectorSvg2 from "/src/assets/vector2.svg";
+import VectorSvg3 from "/src/assets/vector3.svg";
 
 export default function PricingSection() {
   return (
@@ -42,7 +45,7 @@ export default function PricingSection() {
             <img src={LightIcon} alt="Light" />
           </div>
           <img
-            src="/src/assets/Ellipse.svg"
+            src={VectorSvg}
             alt="vector"
             className="flex absolute right-0.5 -z-10"
           />
@@ -117,7 +120,7 @@ export default function PricingSection() {
             <PopularTag className="-mt-15 lg:-mt-20 -mr-3 lg:-mr-8" />
           </div>
           <img
-            src="/src/assets/vector2.svg"
+            src={VectorSvg2}
             alt="vector"
             className="flex absolute right-0.5 -z-10"
           />
@@ -191,7 +194,7 @@ export default function PricingSection() {
             <img src={KingIcon} alt="Light" />
           </div>
           <img
-            src="/src/assets/vector3.svg"
+            src={VectorSvg3}
             alt="vector"
             className="flex absolute right-0.5 -z-10"
           />
