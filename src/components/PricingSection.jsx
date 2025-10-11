@@ -1,7 +1,10 @@
 import { MdDone, MdOutlineMonetizationOn } from "react-icons/md";
 import HeadingGradientText from "./HeadingGradientText";
 import TagText from "./TagText";
+import LightIcon from "/src/assets/LightIcon.svg";
 import PopularTag from "/src/assets/PopularTag.jsx";
+import TargetIcon from "/src/assets/TargetIcon.svg";
+import KingIcon from "/src/assets/kingIcon.svg";
 
 export default function PricingSection() {
   return (
@@ -36,7 +39,7 @@ export default function PricingSection() {
         {/* 1st card */}
         <div className="flex p-6 md:p-12 lg:p-16 flex-col items-center gap-4 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray2 from-0% to-container-gray1 to-100% relative">
           <div className="flex justify-start w-full items-center">
-            <img src="/src/assets/LightIcon.svg" alt="Light" />
+            <img src={LightIcon} alt="Light" />
           </div>
           <img
             src="/src/assets/Ellipse.svg"
@@ -110,7 +113,7 @@ export default function PricingSection() {
         {/* 2nd card */}
         <div className="flex p-6 md:p-12 lg:p-16 flex-col items-center gap-4 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray2 from-0% to-container-gray1 to-100% relative">
           <div className="flex justify-between w-full items-center">
-            <img src="/src/assets/TargetIcon.svg" alt="Target Icon" />
+            <img src={TargetIcon} alt="Target Icon" />
             <PopularTag className="-mt-15 lg:-mt-20 -mr-3 lg:-mr-8" />
           </div>
           <img
@@ -185,7 +188,7 @@ export default function PricingSection() {
         {/* 3rd card */}
         <div className="flex p-6 md:p-12 lg:p-16 flex-col items-center gap-4 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray2 from-0% to-container-gray1 to-100% relative">
           <div className="flex justify-start w-full items-center">
-            <img src="/src/assets/kingIcon.svg" alt="Light" />
+            <img src={KingIcon} alt="Light" />
           </div>
           <img
             src="/src/assets/vector3.svg"

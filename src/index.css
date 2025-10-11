@@ -14,6 +14,8 @@
 
   --font-poppins: "Poppins";
   --font-urbanist: "Urbanist";
+
+  --breakpoint-xsm: 400px;
 }
 
 @layer components {

@@ -1,11 +1,16 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import HeadingGradientText from "./HeadingGradientText";
+import Avatar2 from "/src/assets/placeholder (1).png";
+import Avatar1 from "/src/assets/placeholder.png";
+import TesAVA1 from "/src/assets/tesAva1.svg";
+import TesAVA2 from "/src/assets/tesAva2.svg";
+import TesAVA3 from "/src/assets/tesAva3.svg";
 
 const TestimonialList = [
   {
     id: 1,
-    img: "/src/assets/tesAva1.svg",
+    img: TesAVA1,
     name: "Sarah M.",
     title: "Product Manager, SaaS Startup",
     description:
@@ -15,7 +20,7 @@ const TestimonialList = [
   },
   {
     id: 2,
-    img: "/src/assets/tesAva2.svg",
+    img: TesAVA2,
     name: "Ahmed K.",
     title: "CEO, Service Company",
     description:
@@ -25,7 +30,7 @@ const TestimonialList = [
   },
   {
     id: 3,
-    img: "/src/assets/tesAva3.svg",
+    img: TesAVA3,
     name: "David M.",
     title: "Product Manager, Tech Startup",
     description:
@@ -42,12 +47,8 @@ export default function TestimonialSection() {
       <div className="flex flex-col max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-5">
         {/* <!-- Avatar groups icons --> */}
         <div className="flex justify-end">
-          <img src="/src/assets/placeholder.png" alt="Avatar" />
-          <img
-            src="/src/assets/placeholder (1).png"
-            alt="Avatar"
-            className="-ml-[10px]"
-          />
+          <img src={Avatar1} alt="Avatar" />
+          <img src={Avatar2} alt="Avatar" className="-ml-[10px]" />
           <span className="flex h-[48px] px-[12px] font-bold justify-center items-center gap-[0.976px] rounded-full border border-border bg-surface-brand text-[1rem] text-center text-white -ml-[10px]">
             88+
           </span>

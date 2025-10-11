@@ -1,5 +1,9 @@
 import Button from "./Button";
 import TransparentButton from "./TransparentButton";
+import Avatar2 from "/src/assets/placeholder (1).png";
+import Avatar3 from "/src/assets/placeholder (2).png";
+import Avatar4 from "/src/assets/placeholder (3).png";
+import Avatar1 from "/src/assets/placeholder.png";
 
 export default function WhoWeAre() {
   return (
@@ -40,12 +44,8 @@ export default function WhoWeAre() {
               <div className="flex w-[140px] flex-col justify-center items-start gap-2">
                 {/* <!-- Avatar groups icons --> */}
                 <div className="flex justify-end">
-                  <img src="/src/assets/placeholder.png" alt="Avatar" />
-                  <img
-                    src="/src/assets/placeholder (1).png"
-                    alt="Avatar"
-                    className="-ml-[10px]"
-                  />
+                  <img src={Avatar1} alt="Avatar" />
+                  <img src={Avatar2} alt="Avatar" className="-ml-[10px]" />
                   <span className="flex h-[48px] px-[12px] font-bold justify-center items-center gap-[0.976px] rounded-full border border-border bg-surface-brand text-[1rem] text-center text-white -ml-[10px]">
                     88+
                   </span>
@@ -65,12 +65,8 @@ export default function WhoWeAre() {
               <div className="flex w-[140px] flex-col justify-center items-start gap-2">
                 {/* <!-- Flag groups icons --> */}
                 <div className="flex justify-end">
-                  <img src="/src/assets/placeholder (2).png" alt="Flag" />
-                  <img
-                    src="/src/assets/placeholder (3).png"
-                    alt="Flag"
-                    className="-ml-[10px]"
-                  />
+                  <img src={Avatar3} alt="Flag" />
+                  <img src={Avatar4} alt="Flag" className="-ml-[10px]" />
                   <span className="flex h-[48px] px-[16px] justify-center items-center gap-[0.976px] rounded-full border border-border text-white bg-surface-brand text-center text-[1rem] font-bold -ml-[10px]">
                     6+
                   </span>
@@ -109,7 +105,7 @@ export default function WhoWeAre() {
               children={"What We Do"}
               url={"#letstalk"}
               className="w-full md:w-fit"
-              bgColor="bg-surface-brand"
+              bgColor="bg-surface-brand hover:bg-surface-brand/80"
             />
           </div>
         </div>

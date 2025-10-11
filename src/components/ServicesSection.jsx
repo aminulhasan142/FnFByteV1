@@ -4,14 +4,18 @@ import Button from "./Button";
 import HeadingGradientText from "./HeadingGradientText";
 import TagText from "./TagText";
 import TransparentButton from "./TransparentButton";
+import AiMlIcon from "/src/assets/AI&MLicon.svg";
+import CodeIconSvg from "/src/assets/CodeIcon.svg";
+import CrossSvg from "/src/assets/Cross.png";
+import ProfileSvg from "/src/assets/profile.svg";
 export default function ServicesSection() {
   return (
-    <div className="flex flex-col lg:flex-row max-w-[1440px] w-full items-start gap-1 self-stretch">
+    <div className="flex flex-col lg:flex-row max-w-[1440px] w-full items-start gap-1 self-start">
       {/* first box  */}
-      <div className="w-full lg:w-[60%] flex flex-col items-start self-stretch rounded-3xl bg-linear-[180deg] from-[#0f172a0a] from-0% via-[#ffffff0a] via-50% to-[#0f172a0a] to-100%">
-        <div className="flex flex-col pt-6 md:pt-12 lg:pt-[8.5rem] px-6 md:px-12 lg:px-16 pb-6 md:pb-6 lg:pb-16 items-start gap-3 self-stretch">
+      <div className="sticky h-fit top-[72px] w-full lg:w-[60%] flex flex-col items-start self-stretch rounded-3xl bg-linear-[180deg] from-[#0f172a0a] from-0% via-[#ffffff0a] via-50% to-[#0f172a0a] to-100%">
+        <div className="flex flex-col pt-6 md:pt-12 lg:pt-[8.5rem] px-6 md:px-12 lg:px-16 pb-6 md:pb-6 lg:pb-16 items-start gap-3 self-start">
           {/* text container */}
-          <div className="flex flex-col items-start gap-3 self-stretch">
+          <div className="flex flex-col items-start gap-3 self-start">
             <TagText text={"Services"}>
               <MdConstruction className="text-zinc-400" />{" "}
             </TagText>
@@ -39,24 +43,20 @@ export default function ServicesSection() {
                   children={"Let’s Talk Now"}
                   url={"#letstalk"}
                   className="w-full md:w-fit"
-                  bgColor="bg-surface-brand"
+                  bgColor="bg-surface-brand hover:bg-surface-brand/80"
                 />
               </div>
             </div>
           </div>
           {/* vector cross */}
-          <img
-            src="/src/assets/Cross.png"
-            alt="Vector"
-            className="hidden lg:flex"
-          />
+          <img src={CrossSvg} alt="Vector" className="hidden lg:flex" />
         </div>
       </div>
       {/* 2nd box container */}
       <div className="flex flex-col justify-center items-start gap-1 w-full lg:w-[40%]">
         {/* gig card 1 */}
         <div className="flex flex-col pt-6 md:pt-12 lg:pt-[8.5rem] px-4 md:px-12 lg:px-16 pb-6 md:pb-6 lg:pb-16 items-start gap-5 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray1 from-0% to-container-gray2 to-100%">
-          <img src="/src/assets/profile.svg" alt="Profile" />
+          <img src={ProfileSvg} alt="Profile" />
           {/* gig description */}
           <div className="flex flex-col items-start gap-6 self-stretch">
             {/* title heading */}
@@ -154,7 +154,7 @@ export default function ServicesSection() {
         </div>
         {/* gig card 2 */}
         <div className="flex flex-col pt-6 md:pt-12 lg:pt-16 px-4 md:px-12 lg:px-16 pb-6 md:pb-6 lg:pb-16 items-start gap-5 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray2 from-0% to-container-gray2 to-100%">
-          <img src="/src/assets/CodeIcon.svg" alt="Profile" />
+          <img src={CodeIconSvg} alt="Profile" />
           {/* gig description */}
           <div className="flex flex-col items-start gap-6 self-stretch">
             {/* title heading */}
@@ -229,7 +229,7 @@ export default function ServicesSection() {
         </div>
         {/* gig card 3 */}
         <div className="flex flex-col pt-6 md:pt-12 lg:pt-16 px-4 md:px-12 lg:px-16 pb-6 md:pb-6 lg:pb-16 items-start gap-5 self-stretch rounded-3xl bg-linear-[180deg] from-container-gray2 from-0% to-container-gray1 to-100%">
-          <img src="/src/assets/AI&MLicon.svg" alt="Profile" />
+          <img src={AiMlIcon} alt="Profile" />
           {/* gig description */}
           <div className="flex flex-col items-start gap-6 self-stretch">
             {/* title heading */}

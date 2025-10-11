@@ -11,7 +11,7 @@ import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 export default function MenuContent({ isMenuOpen }) {
   return (
     <div
-      className={`w-full h-full bg-cyan-950 backdrop-blur-lg fixed
+      className={`w-full h-full  backdrop-blur-3xl bg-cyan-950 fixed
       } top-2 z-30 mt-16 transition-transform duration-300 ease-in-out transform 
           ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
     >

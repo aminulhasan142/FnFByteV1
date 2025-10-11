@@ -2,14 +2,14 @@ import { IoMdArrowDropdown, IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import Button from "./Button";
-
+import SiteLogo from "/src/assets/logo.svg";
 export default function Navbar({ toggleMenu, isMenuOpen }) {
   return (
     <nav className="w-full flex justify-center items-center h-[4.5rem] py-3 fixed backdrop-blur-md bg-navbar z-50">
       <div className="flex max-w-[1440px] w-full justify-between items-center self-stretch px-2">
         {/* logo */}
         <a href="#" className="flex items-center">
-          <img src="/src/assets/logo.svg" alt="logo" />
+          <img src={SiteLogo} alt="logo" />
           <div className="flex justify-center items-center px-4 py-3 rounded-2xl">
             <span className="text-white font-poppins text-lg font-bold leading-[1.8rem]">
               FnF
@@ -55,7 +55,10 @@ export default function Navbar({ toggleMenu, isMenuOpen }) {
         {/* CTA button */}
         <div className="flex justify-center items-center gap-1">
           <span className="hidden sm:flex">
-            <Button children={"Book a Call"} bgColor="bg-surface-brand" />
+            <Button
+              children={"Book a Call"}
+              bgColor="bg-surface-brand hover:bg-surface-brand/80"
+            />
           </span>
           <button
             className="flex px-3 py-2.5 justify-center items-center bg-menu border border-zinc-400/5 text-zinc-500 hover:text-zinc-50 backdrop-blur-[20px] rounded-2xl transition-colors cursor-pointer"

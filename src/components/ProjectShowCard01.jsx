@@ -1,4 +1,5 @@
 import Button from "./Button.jsx";
+import BannerImg from "/src/assets/MessageReply.png";
 
 export default function ProjectShowCard() {
   return (
@@ -63,15 +64,11 @@ export default function ProjectShowCard() {
           children={"Case Study"}
           url={"#casestudy"}
           className="w-full md:w-fit"
-          bgColor="bg-black"
+          bgColor="bg-black hover:bg-black/80"
         />
       </div>
 
-      <img
-        src="/src/assets/MessageReply.png"
-        alt="Card Image"
-        className="p-2.5"
-      />
+      <img src={BannerImg} alt="Card Image" className="p-2.5" />
     </>
   );
 }

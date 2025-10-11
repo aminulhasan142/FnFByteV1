@@ -1,14 +1,66 @@
+import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { LuSettings2 } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import CardImage2 from "../assets/cardImg (1).svg";
 import CardImage3 from "../assets/cardImg (2).svg";
 import CardImage1 from "../assets/cardImg.svg";
 import Button from "../components/Button";
+import FilterTagText from "../components/FilterTagText";
 import TagText from "../components/TagText";
+
+const CardListItems = [
+  {
+    id: 1,
+    img: CardImage1,
+    tags: ["UI/UX Design", "Web App", "AI/ML"],
+    title: "Message Reply - AI agents",
+    link: "#somewhare",
+  },
+  {
+    id: 2,
+    img: CardImage2,
+    tags: ["Web App", "UI/UX Design", "AI/ML"],
+    title: "StoryMaster - AI Book writer",
+    link: "#somewhare",
+  },
+  {
+    id: 3,
+    img: CardImage3,
+    tags: ["Mobile App", "UI/UX Design"],
+    title: "Salescare - Supply chain Management System",
+    link: "#somewhare",
+  },
+  {
+    id: 4,
+    img: CardImage1,
+    tags: ["Mobile App", "UI/UX Design"],
+    title: "Salescare - Supply chain Management System",
+    link: "#somewhare",
+  },
+
+  {
+    id: 5,
+    img: CardImage2,
+    tags: ["UI/UX Design", "Web App", "AI/ML"],
+    title: "Message Reply - AI agents",
+    link: "#somewhare",
+  },
+  {
+    id: 6,
+    img: CardImage3,
+    tags: ["Web App", "UI/UX Design"],
+    title: "StoryMaster - AI Book writer",
+    link: "#somewhare",
+  },
+];
+
 export default function Work() {
+  const [showMore1, setShowMore1] = useState(true);
+  const [showMore2, setShowMore2] = useState(true);
   return (
     <div className="pt-16 flex w-full justify-center px-2">
-      <div className="flex max-w-[1440px] px-8 lg:px-16 pt-12 lg:pt-20 flex-col justify-center items-center gap-3">
+      <div className="flex max-w-[1440px] px-4 lg:px-16 pt-12 lg:pt-20 flex-col justify-center items-center gap-3">
         {/* page pagination */}
         <div className="flex py-2.5 px-4 justify-center items-center gap-1 border border-border rounded-full">
           <Link
@@ -37,38 +89,22 @@ export default function Work() {
           {/* sticky container for filtering  */}
 
           {/* content box for small screen */}
-          <div className="flex lg:hidden max-w-[320px] sm:max-w-[480px] md:max-w-[720px] justify-center items-center">
+          <div className="flex lg:hidden max-w-[280px] xsm:max-w-[370px] sm:max-w-[480px] md:max-w-[720px] justify-center items-center">
             <div className="flex overflow-x-auto whitespace-nowrap space-x-4 p-2">
-              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                All Services
+              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl bg-[#7a1efa33] text-sm font-poppins font-semibold text-indigo-400 gap-1">
+                <LuSettings2 />
+                Filter
               </button>
-              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                MVP(12)
-              </button>
-              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                UI/UX Design(25)
-              </button>
-              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                Mobile App Development(2)
-              </button>
-              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                Web Development(13)
-              </button>
-              <button className="flex px-5 py-3 justify-center items-center  border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                SaaS(7)
-              </button>
-              <button className="flex px-5 py-3 justify-center items-center  border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                AI/ML (5)
-              </button>
-              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                Healthcare(2)
-              </button>
-              <button className="flex px-5 py-3 justify-center items-center  border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                Edtech(3)
-              </button>
-              <button className="flex px-5 py-3 justify-center items-center  border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                Others(4)
-              </button>
+              <FilterTagText>All Services</FilterTagText>
+              <FilterTagText>MVP(12)</FilterTagText>
+              <FilterTagText>UI/UX Design(25)</FilterTagText>
+              <FilterTagText>Mobile App Development(2)</FilterTagText>
+              <FilterTagText>Web Development(13)</FilterTagText>
+              <FilterTagText>SaaS(7)</FilterTagText>
+              <FilterTagText>AI/ML(5)</FilterTagText>
+              <FilterTagText>Healthcare(2)</FilterTagText>
+              <FilterTagText>Edtech(3)</FilterTagText>
+              <FilterTagText>Others(4)</FilterTagText>
             </div>
           </div>
 
@@ -77,18 +113,27 @@ export default function Work() {
             {/* service section */}
             <div className="flex flex-col justify-center items-center gap-2.5 self-stretch">
               {/* title container */}
-              <div className="flex justify-between items-center self-stretch">
+              <button
+                onClick={() => setShowMore1(!showMore1)}
+                className="flex justify-between items-center self-stretch cursor-pointer"
+              >
                 {/* title */}
                 <h1 className="text-xl not-italic font-bold uppercase bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent text-left">
                   services
                 </h1>
 
-                <span className="flex p-1.5 justify-center items-center gap-0.5 rounded-full border border-border text-2xl text-zinc-400 backdrop-blur-3xl bg-white/4">
-                  <IoIosArrowDown />
+                <span className="flex p-1.5 justify-center items-center gap-0.5 rounded-2xl border border-border text-2xl text-zinc-400 backdrop-blur-3xl bg-white/4">
+                  <IoIosArrowDown
+                    className={`${showMore1 ? "rotate-180" : "rotate-0"}`}
+                  />
                 </span>
-              </div>
+              </button>
               {/* tag container */}
-              <div className="flex items-start content-start gap-2  self-stretch flex-wrap">
+              <div
+                className={`flex items-start content-start gap-2  self-stretch flex-wrap overflow-hidden transition-all duration-300 ease-in-out ${
+                  showMore1 ? "max-h-max" : "h-0"
+                }`}
+              >
                 <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
                   All Services
                 </button>
@@ -109,18 +154,32 @@ export default function Work() {
             {/* industries section */}
             <div className="flex flex-col justify-center items-center gap-2.5 self-stretch">
               {/* title container */}
-              <div className="flex justify-between items-center self-stretch">
+              <button
+                onClick={() => setShowMore2(!showMore2)}
+                className="flex justify-between items-center self-stretch cursor-pointer"
+              >
                 {/* title */}
                 <h1 className="text-xl not-italic font-bold uppercase bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent text-left">
                   industries
                 </h1>
 
-                <span className="flex p-1.5 justify-center items-center gap-0.5 rounded-full border border-border text-2xl text-zinc-400 backdrop-blur-3xl bg-white/4">
-                  <IoIosArrowDown />
+                <span
+                  className={`flex p-1.5 justify-center items-center gap-0.5 rounded-2xl border border-border text-2xl text-zinc-400 backdrop-blur-3xl bg-white/4 transition-transform duration-300 ease-in-out`}
+                >
+                  <IoIosArrowDown
+                    className={`${showMore2 ? "rotate-180" : "rotate-0"}`}
+                  />
                 </span>
-              </div>
+              </button>
               {/* tag container */}
-              <div className="flex items-start content-start gap-2  self-stretch flex-wrap">
+              <div
+                className={`flex items-start content-start gap-2  self-stretch flex-wrap overflow-hidden transition-transform duration-300 ease-in-out ${
+                  showMore2 ? "max-h-max" : "h-0"
+                }`}
+              >
+                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                  All Industries
+                </button>
                 <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
                   SaaS(7)
                 </button>
@@ -159,100 +218,26 @@ export default function Work() {
           </div>
 
           {/* card container */}
-          <div className="w-[90%] lg:max-w-[70%] flex flex-col items-start gap-5 self-stretch">
-            {/* 1st box */}
-            <div className="flex flex-col lg:flex-row w-full gap-1">
-              {/* card 1 */}
-              <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage1} alt="Card Image" className="w-full" />
+          <div className="w-[100%] lg:max-w-[70%] grid grid-cols-1 lg:grid-cols-2 items-start gap-2 self-stretch">
+            {CardListItems.map((item) => (
+              <a
+                href={item.link}
+                key={item.id}
+                className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1"
+              >
+                <img src={item.img} alt="Card Image" className="w-full" />
                 <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
                   <div className="flex flex-wrap gap-1">
-                    <TagText text={"UI/UX Design"} />
-                    <TagText text={"Web App"} />
-                    <TagText text={"AI/ML"} />
+                    {item.tags.map((tag) => (
+                      <TagText text={tag} />
+                    ))}
                   </div>
                   <h1 className="text-white font-urbanist text-xl font-black capitalize">
-                    Message Reply - AI agents
+                    {item.title}
                   </h1>
                 </div>
-              </div>
-              {/* card 2 */}
-              <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage2} alt="Card Image" className="w-full" />
-                <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap">
-                    <TagText text={"UI/UX Design"} />
-                    <TagText text={"Web App"} />
-                    <TagText text={"AI/ML"} />
-                  </div>
-                  <h1 className="text-white font-urbanist text-xl font-black capitalize">
-                    Message Reply - AI agents
-                  </h1>
-                </div>
-              </div>
-            </div>
-            {/* 2nd box */}
-            <div className="flex flex-col lg:flex-row w-full gap-1">
-              {/* card 3 */}
-              <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage3} alt="Card Image" className="w-full" />
-                <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap gap-1">
-                    <TagText text={"UI/UX Design"} />
-                    <TagText text={"Web App"} />
-                    <TagText text={"AI/ML"} />
-                  </div>
-                  <h1 className="text-white font-urbanist text-xl font-black capitalize">
-                    Message Reply - AI agents
-                  </h1>
-                </div>
-              </div>
-              {/* card 4 */}
-              <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage1} alt="Card Image" className="w-full" />
-                <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap gap-1">
-                    <TagText text={"UI/UX Design"} />
-                    <TagText text={"Web App"} />
-                    <TagText text={"AI/ML"} />
-                  </div>
-                  <h1 className="text-white font-urbanist text-xl font-black capitalize">
-                    Message Reply - AI agents
-                  </h1>
-                </div>
-              </div>
-            </div>
-            {/* 3rd box */}
-            <div className="flex flex-col lg:flex-row w-full gap-1">
-              {/* card 5 */}
-              <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage2} alt="Card Image" className="w-full" />
-                <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap gap-1">
-                    <TagText text={"UI/UX Design"} />
-                    <TagText text={"Web App"} />
-                    <TagText text={"AI/ML"} />
-                  </div>
-                  <h1 className="text-white font-urbanist text-xl font-black capitalize">
-                    Message Reply - AI agents
-                  </h1>
-                </div>
-              </div>
-              {/* card 6 */}
-              <div className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-                <img src={CardImage3} alt="Card Image" className="w-full" />
-                <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap gap-1">
-                    <TagText text={"UI/UX Design"} />
-                    <TagText text={"Web App"} />
-                    <TagText text={"AI/ML"} />
-                  </div>
-                  <h1 className="text-white font-urbanist text-xl font-black capitalize">
-                    Message Reply - AI agents
-                  </h1>
-                </div>
-              </div>
-            </div>
+              </a>
+            ))}
           </div>
         </div>
       </div>

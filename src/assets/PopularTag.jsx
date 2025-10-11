@@ -3,7 +3,7 @@ import { MdStars } from "react-icons/md";
 export default function PopularTag({ className }) {
   return (
     <span
-      className={`flex py-2 pl-2 pr-4 justify-center gap-1 rounded-full border border-border bg-[#ffffff0d] ${className}`}
+      className={`flex py-2 pl-2 pr-4 justify-center items-center gap-1 rounded-full border border-border bg-[#ffffff0d] ${className}`}
     >
       {/* <img
         src="/src/assets/stars.svg"

@@ -3,7 +3,7 @@ import { MdDialpad, MdOutlineMailOutline } from "react-icons/md";
 import Button from "./Button";
 export default function ContactForm() {
   return (
-    <div className="flex w-full justify-center items-center">
+    <div className="flex w-full px-2 justify-center items-center">
       <div className="flex flex-col lg:flex-row max-w-[1440px] w-full gap-1 self-stretch ">
         {/* 1st container */}
         <div className="flex w-full p-6 md:p-12 lg:p-16 flex-col items-start gap-4 self-stretch rounded-3xl  bg-linear-[180deg] from-0% from-[#00652E] to-100% to-[#0f172a00]">
@@ -80,7 +80,7 @@ export default function ContactForm() {
               children={"Subscribe Us"}
               url={"#contact"}
               className="w-full md:w-fit"
-              bgColor="bg-surface-brand"
+              bgColor="bg-surface-brand hover:bg-surface-brand/80"
             />
           </div>
         </div>

@@ -2,13 +2,15 @@ import { MdNewspaper } from "react-icons/md";
 import Button from "./Button";
 import HeadingGradientText from "./HeadingGradientText";
 import TagText from "./TagText";
+import ArticleImg1 from "/src/assets/ArticleImage1.svg";
+import ArticleImg2 from "/src/assets/ArticleImage2.svg";
 
 export default function ArticleSection() {
   return (
     <>
       {/* Article summary card */}
       <div className="flex flex-col max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-3">
-        <TagText text="Pricing">
+        <TagText text="Articles">
           <MdNewspaper className="text-zinc-400" />
         </TagText>
         <div className="flex flex-col lg:flex-row items-start justify-between gap-16">
@@ -23,7 +25,7 @@ export default function ArticleSection() {
             </p>
             <Button
               children={"Book a Call"}
-              bgColor="bg-surface-brand"
+              bgColor="bg-surface-brand hover:bg-surface-brand/80"
               url={"#article"}
             />
           </div>
@@ -38,7 +40,7 @@ export default function ArticleSection() {
         {/* 1st contianer article */}
         <div className="flex p-6 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
           <img
-            src="/src/assets/ArticleImage1.svg"
+            src={ArticleImg1}
             alt="Article Cover"
             className="rounded-xl w-full"
           />
@@ -65,7 +67,7 @@ export default function ArticleSection() {
         {/* 2nd contianer article */}
         <div className="flex p-6 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
           <img
-            src="/src/assets/ArticleImage2.svg"
+            src={ArticleImg2}
             alt="Article Cover"
             className="rounded-xl w-full"
           />

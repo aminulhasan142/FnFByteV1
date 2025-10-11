@@ -21,7 +21,7 @@ export default function OurProject() {
             children={"Browse Projects"}
             url={"#projects"}
             className="w-full md:w-fit"
-            bgColor="bg-surface-brand"
+            bgColor="bg-surface-brand hover:bg-surface-brand/80"
           />
         </div>
       </div>

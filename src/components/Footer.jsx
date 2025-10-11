@@ -8,10 +8,11 @@ import {
 import { FaBehance, FaXTwitter } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineFileDownload } from "react-icons/md";
+import siteLogo from "/src/assets/logo.svg";
 
 export default function Footer() {
   return (
-    <footer className="w-full justify-center flex">
+    <footer className="w-full flex px-2 justify-center">
       <div className="flex flex-col max-w-[1440px] w-full p-6 md:p-12 lg:p-16 justify-center items-start self-center rounded-3xl gap-6 bg-linear-[180deg] from-container-gray2 to-container-gray1">
         {/* favicon and contacts container */}
         <div className="flex flex-col items-start gap-5 self-stretch">
@@ -19,7 +20,7 @@ export default function Footer() {
           <div className="flex justify-between  items-center self-stretch">
             {/* logo */}
             <a href="#" className="flex items-center">
-              <img src="/src/assets/logo.svg" alt="logo" />
+              <img src={siteLogo} alt="logo" />
               <div className="flex justify-center items-center px-4 py-3 rounded-2xl">
                 <span className="text-white font-poppins text-lg font-bold leading-[1.8rem]">
                   FnF
@@ -165,7 +166,7 @@ export default function Footer() {
             {/* download button */}
             <a
               href="#download"
-              className="flex lg:hidden py-3 pl-3 pr-4 gap-1 rounded-2xl bg-surface-brand justify-center items-center"
+              className="flex lg:hidden py-3 pl-3 pr-4 gap-1 rounded-2xl bg-surface-brand hover:bg-surface-brand/80 transition-colors duration-500 justify-center items-center"
             >
               <MdOutlineFileDownload className="text-white text-2xl" />
               <span className="font-poppins text-sm font-bold text-white">

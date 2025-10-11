@@ -1,6 +1,7 @@
 import Button from "./Button";
 import TransparentButton from "./TransparentButton";
 import BlurElement from "/src/assets/BlurElement.jsx";
+import HeroBanner from "/src/assets/Embed.png";
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
             children={"Let’s Talk"}
             url={"#contact"}
             className="w-full md:w-fit"
-            bgColor="bg-surface-brand"
+            bgColor="bg-surface-brand hover:bg-surface-brand/80"
           />
           <span className="hidden lg:flex absolute -z-10 ">
             <BlurElement />
@@ -35,7 +36,7 @@ export default function Hero() {
         </div>
       </div>
       {/* video or image section */}
-      <img src="/src/assets/Embed.png" alt="Hero Image" />
+      <img src={HeroBanner} alt="Hero Image" />
     </div>
   );
 }
