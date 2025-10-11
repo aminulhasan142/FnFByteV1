@@ -130,25 +130,27 @@ export default function Work() {
               </button>
               {/* tag container */}
               <div
-                className={`flex items-start content-start gap-2  self-stretch flex-wrap overflow-hidden transition-all duration-300 ease-in-out ${
+                className={` overflow-hidden transition-all duration-300 ease-in-out ${
                   showMore1 ? "max-h-max" : "h-0"
                 }`}
               >
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  All Services
-                </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  MVP(12)
-                </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  UI/UX Design(25)
-                </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  Mobile App Development(2)
-                </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  Web Development(13)
-                </button>
+                <div className="flex items-start content-start gap-2 self-stretch flex-wrap">
+                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                    All Services
+                  </button>
+                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                    MVP(12)
+                  </button>
+                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                    UI/UX Design(25)
+                  </button>
+                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                    Mobile App Development(2)
+                  </button>
+                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                    Web Development(13)
+                  </button>
+                </div>
               </div>
             </div>
             {/* industries section */}

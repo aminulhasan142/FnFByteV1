@@ -12,7 +12,7 @@ export default function ServicesSection() {
   return (
     <div className="flex flex-col lg:flex-row max-w-[1440px] w-full items-start gap-1 self-start">
       {/* first box  */}
-      <div className="sticky h-fit top-[72px] w-full lg:w-[60%] flex flex-col items-start self-stretch rounded-3xl bg-linear-[180deg] from-[#0f172a0a] from-0% via-[#ffffff0a] via-50% to-[#0f172a0a] to-100%">
+      <div className="lg:sticky h-fit top-0 w-full lg:w-[60%] flex flex-col items-start self-stretch rounded-3xl bg-linear-[180deg] from-[#0f172a0a] from-0% via-[#ffffff0a] via-50% to-[#0f172a0a] to-100%">
         <div className="flex flex-col pt-6 md:pt-12 lg:pt-[8.5rem] px-6 md:px-12 lg:px-16 pb-6 md:pb-6 lg:pb-16 items-start gap-3 self-start">
           {/* text container */}
           <div className="flex flex-col items-start gap-3 self-start">
