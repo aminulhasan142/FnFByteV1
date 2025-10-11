@@ -93,7 +93,7 @@ export default function WhoWeAre() {
         <div className="flex flex-col items-start gap-8 self-stretch">
           <p className="text-[2rem] not-italic font-bold leading-none md:leading-normal bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent">
             FnFByte is a forward-thinking technology company dedicated to
-            transformaxg ideas into impactful digital solutions.
+            transforming ideas into impactful digital solutions.
           </p>
           {/* CTA button */}
           <div className="flex flex-col md:flex-row w-full items-center gap-2">
