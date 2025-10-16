@@ -11,11 +11,11 @@ import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 export default function MenuContent({ isMenuOpen }) {
   return (
     <div
-      className={`w-full h-full  backdrop-blur-3xl bg-cyan-950 fixed
+      className={`w-full h-full flex justify-center items-center  backdrop-blur-md bg-navbar fixed
       } top-2 z-30 mt-16 transition-transform duration-300 ease-in-out transform 
           ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
     >
-      <div className="flex max-w-[1440px] flex-col-reverse md:flex-row-reverse lg:flex-row px-8 lg:px-16 items-start justify-between">
+      <div className="flex max-w-[1440px] w-full flex-col-reverse md:flex-row-reverse lg:flex-row px-8 lg:px-16 items-start justify-between">
         {/* CTAs sections */}
         <div className="flex py-1 lg:py-24 flex-col justify-start lg:justify-end items-start gap-2 lg:gap-16 self-stretch">
           {/* let's talk section */}
