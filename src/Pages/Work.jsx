@@ -58,6 +58,7 @@ const CardListItems = [
 export default function Work() {
   const [showMore1, setShowMore1] = useState(true);
   const [showMore2, setShowMore2] = useState(true);
+
   return (
     <div className="pt-16 flex w-full justify-center px-2">
       <div className="flex max-w-[1440px] px-4 lg:px-16 pt-12 lg:pt-20 flex-col justify-center items-center gap-3">
@@ -135,7 +136,7 @@ export default function Work() {
                 }`}
               >
                 <div className="flex items-start content-start gap-2 self-stretch flex-wrap">
-                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl bg-[#7a1efa33] text-sm font-poppins font-semibold text-indigo-400 cursor-pointer transition-colors">
                     All Services
                   </button>
                   <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
@@ -179,7 +180,7 @@ export default function Work() {
                   showMore2 ? "max-h-max" : "h-0"
                 }`}
               >
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
+                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl bg-[#7a1efa33]  text-sm font-poppins font-semibold text-indigo-400 cursor-pointer transition-colors">
                   All Industries
                 </button>
                 <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
@@ -225,7 +226,7 @@ export default function Work() {
               <a
                 href={item.link}
                 key={item.id}
-                className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1"
+                className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 hover:to-container-gray2 transition-colors duration-500"
               >
                 <img src={item.img} alt="Card Image" className="w-full" />
                 <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
