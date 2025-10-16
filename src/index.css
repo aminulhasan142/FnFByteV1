@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navbar: rgb(15, 23, 42 / 90);
+  --color-navbar: rgba(15, 23, 42, 0.9);
   --color-border: rgba(255, 255, 255, 0.05);
   --color-menu: rgba(255, 255, 255, 0.04);
   --color-menu-hover: #27272a;
