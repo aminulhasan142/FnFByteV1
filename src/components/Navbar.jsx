@@ -6,7 +6,7 @@ import SiteLogo from "/src/assets/logo.svg";
 export default function Navbar({ toggleMenu, isMenuOpen }) {
   return (
     <nav className="w-full flex justify-center items-center h-[4.5rem] py-3 fixed backdrop-blur-md bg-navbar z-50">
-      <div className="flex max-w-[1440px] w-full justify-between items-center self-stretch px-2">
+      <div className="flex max-w-[1440px] w-full justify-between items-center self-stretch px-2 lg:px-0">
         {/* logo */}
         <a href="#" className="flex items-center">
           <img src={SiteLogo} alt="logo" />
@@ -58,6 +58,7 @@ export default function Navbar({ toggleMenu, isMenuOpen }) {
             <Button
               children={"Book a Call"}
               bgColor="bg-surface-brand hover:bg-surface-brand/80"
+              url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}
             />
           </span>
           <button

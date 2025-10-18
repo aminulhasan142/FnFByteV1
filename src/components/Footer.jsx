@@ -55,49 +55,56 @@ export default function Footer() {
               <div className="flex justify-start items-center gap-2.5 flex-wrap">
                 {/* twitter */}
                 <a
-                  href="#twitter"
+                  href="https://www.linkedin.com/company/fnfbyte/"
+                  target="_blank"
                   className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
                 >
                   <FaXTwitter className="text-white text-2xl" />
                 </a>
                 {/* facebook */}
                 <a
-                  href="#facebook"
+                  href="https://www.linkedin.com/company/fnfbyte/"
+                  target="_blank"
                   className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
                 >
                   <FaFacebookF className="text-white text-2xl" />
                 </a>
                 {/* linkedIn */}
                 <a
-                  href="#linkedIn"
+                  href="https://www.linkedin.com/company/fnfbyte/"
+                  target="_blank"
                   className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
                 >
                   <FaLinkedin className="text-white text-2xl" />
                 </a>
                 {/* behanced */}
                 <a
-                  href="#behanced"
+                  href="https://www.linkedin.com/company/fnfbyte/"
+                  target="_blank"
                   className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
                 >
                   <FaBehance tter className="text-white text-2xl" />
                 </a>
                 {/* instagaram */}
                 <a
-                  href="#instagram"
+                  href="https://www.linkedin.com/company/fnfbyte/"
+                  target="_blank"
                   className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
                 >
                   <FaInstagram tter className="text-white text-2xl" />
                 </a>
                 {/* dribbble */}
                 <a
-                  href="#dribbble"
+                  href="https://www.linkedin.com/company/fnfbyte/"
+                  target="_blank"
                   className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
                 >
                   <FaDribbble tter className="text-white text-2xl" />
                 </a>
                 {/* Youtube */}
                 <a
-                  href="#youtube"
+                  href="https://www.linkedin.com/company/fnfbyte/"
+                  target="_blank"
                   className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
                 >
                   <FaYoutube tter className="text-white text-2xl" />
@@ -108,55 +115,55 @@ export default function Footer() {
             {/* page link tab */}
             <div className="flex justify-start lg:justify-end items-start gap-2 self-stretch flex-wrap">
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Home
               </a>
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Services
               </a>
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Projects
               </a>
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Work Process
               </a>
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 About
               </a>
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Blog
               </a>
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Career
               </a>
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Teams
               </a>
               <a
-                href="#home"
+                href="#"
                 className="flex py-2 px-4  justify-center  items-center gap-1 rounded-xl bg-black backdrop-blur-xl text-sm font-poppins font-bold text-zinc-400 hover:bg-slate-950 hover:text-zinc-200 transition-colors"
               >
                 Contact Us
@@ -165,7 +172,7 @@ export default function Footer() {
 
             {/* download button */}
             <a
-              href="#download"
+              href="#"
               className="flex lg:hidden py-3 pl-3 pr-4 gap-1 rounded-2xl bg-surface-brand hover:bg-surface-brand/80 transition-colors duration-500 justify-center items-center"
             >
               <MdOutlineFileDownload className="text-white text-2xl" />

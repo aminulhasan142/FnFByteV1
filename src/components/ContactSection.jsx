@@ -31,7 +31,8 @@ export default function ContactForm() {
             <div className="flex flex-col lg:flex-row items-end w-full gap-3 self-stretch">
               {/* what'sapp */}
               <a
-                href="#whatsapp"
+                href="https://wa.me/+8801779911491"
+                target="_blank"
                 className="bg-[#18181B]  flex py-3 px-4  justify-center items-center gap-1 rounded-2xl backdrop-blur-xl w-full"
               >
                 <FaWhatsapp className="text-white" />
@@ -41,7 +42,8 @@ export default function ContactForm() {
               </a>
               {/* mail */}
               <a
-                href="#whatsapp"
+                href="mailto:hello@fnfbyte.com?subject=Inquiry"
+                target="_blank"
                 className="bg-[#18181B]  flex py-3 px-4  justify-center items-center gap-1 rounded-2xl backdrop-blur-xl w-full"
               >
                 <MdOutlineMailOutline className="text-white" />
@@ -78,7 +80,7 @@ export default function ContactForm() {
             {/* input box*/}
             <Button
               children={"Subscribe Us"}
-              url={"#contact"}
+              url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}
               className="w-full md:w-fit"
               bgColor="bg-surface-brand hover:bg-surface-brand/80"
             />

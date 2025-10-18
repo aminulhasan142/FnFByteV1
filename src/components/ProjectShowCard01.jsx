@@ -62,7 +62,6 @@ export default function ProjectShowCard() {
         {/* button */}
         <Button
           children={"Case Study"}
-          url={"#casestudy"}
           className="w-full md:w-fit"
           bgColor="bg-black hover:bg-black/80"
         />

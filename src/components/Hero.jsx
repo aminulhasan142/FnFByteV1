@@ -23,10 +23,11 @@ export default function Hero() {
           <TransparentButton
             children={"Starting at $500/Project"}
             className="w-full md:w-fit"
+            url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}
           />
           <Button
             children={"Let’s Talk"}
-            url={"#contact"}
+            url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}
             className="w-full md:w-fit"
             bgColor="bg-surface-brand hover:bg-surface-brand/80"
           />

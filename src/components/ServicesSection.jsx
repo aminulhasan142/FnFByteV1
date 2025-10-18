@@ -38,10 +38,11 @@ export default function ServicesSection() {
                 <TransparentButton
                   children={"Book a Call"}
                   className="w-full md:w-fit"
+                  url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}
                 />
                 <Button
                   children={"Let’s Talk Now"}
-                  url={"#letstalk"}
+                  url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}
                   className="w-full md:w-fit"
                   bgColor="bg-surface-brand hover:bg-surface-brand/80"
                 />

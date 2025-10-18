@@ -26,7 +26,7 @@ export default function ArticleSection() {
             <Button
               children={"Book a Call"}
               bgColor="bg-surface-brand hover:bg-surface-brand/80"
-              url={"#article"}
+              url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}
             />
           </div>
         </div>

@@ -103,7 +103,6 @@ export default function WhoWeAre() {
             />
             <Button
               children={"What We Do"}
-              url={"#letstalk"}
               className="w-full md:w-fit"
               bgColor="bg-surface-brand hover:bg-surface-brand/80"
             />

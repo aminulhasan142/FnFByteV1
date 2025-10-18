@@ -25,16 +25,24 @@ export default function MenuContent({ isMenuOpen }) {
               Let’s Talk
             </h1>
             <div className="flex flex-col items-start gap-1 lg:gap-4">
-              <a href="#whatsapp" className="flex items-center gap-2">
+              <a
+                href="https://wa.me/+8801779911491"
+                target="_blank"
+                className="flex items-center gap-2"
+              >
                 <IoLogoWhatsapp className="text-white text-3xl" />
                 <h4 className="text-white font-urbanist text-xl font-semibold">
                   +880 1779911 491
                 </h4>
               </a>
-              <a href="#email" className="flex items-center gap-2">
+              <a
+                href="mailto:hello@fnfbyte.com?subject=Inquiry"
+                target="_blank"
+                className="flex items-center gap-2"
+              >
                 <IoMdMail className="text-white text-3xl" />
                 <h4 className="text-white font-urbanist text-xl font-semibold">
-                  fnfbyte@gmail.com
+                  hello@fnfbyte.com
                 </h4>
               </a>
             </div>
@@ -49,49 +57,56 @@ export default function MenuContent({ isMenuOpen }) {
             <div className="flex max-w-[300px] justify-start items-center gap-2.5 flex-wrap">
               {/* twitter */}
               <a
-                href="#twitter"
+                href="https://www.linkedin.com/company/fnfbyte/"
+                target="_blank"
                 className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
               >
                 <FaXTwitter className="text-white text-2xl" />
               </a>
               {/* facebook */}
               <a
-                href="#facebook"
+                href="https://www.linkedin.com/company/fnfbyte/"
+                target="_blank"
                 className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
               >
                 <FaFacebookF className="text-white text-2xl" />
               </a>
               {/* linkedIn */}
               <a
-                href="#linkedIn"
+                href="https://www.linkedin.com/company/fnfbyte/"
+                target="_blank"
                 className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
               >
                 <FaLinkedin className="text-white text-2xl" />
               </a>
               {/* behanced */}
               <a
-                href="#behanced"
+                href="https://www.linkedin.com/company/fnfbyte/"
+                target="_blank"
                 className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
               >
                 <FaBehance tter className="text-white text-2xl" />
               </a>
               {/* instagaram */}
               <a
-                href="#instagram"
+                href="https://www.linkedin.com/company/fnfbyte/"
+                target="_blank"
                 className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
               >
                 <FaInstagram tter className="text-white text-2xl" />
               </a>
               {/* dribbble */}
               <a
-                href="#dribbble"
+                href="https://www.linkedin.com/company/fnfbyte/"
+                target="_blank"
                 className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
               >
                 <FaDribbble tter className="text-white text-2xl" />
               </a>
               {/* Youtube */}
               <a
-                href="#youtube"
+                href="https://www.linkedin.com/company/fnfbyte/"
+                target="_blank"
                 className="p-4 rounded-full border border-cyan-950 bg-slate-800 hover:bg-slate-600 transition-colors"
               >
                 <FaYoutube tter className="text-white text-2xl" />
@@ -111,13 +126,13 @@ export default function MenuContent({ isMenuOpen }) {
           {/* shortcut links container */}
           <div className="flex flex-col items-start lg:items-end gap-1 lg:gap-2">
             <a
-              href="#service"
+              href="#"
               className="text-right font-poppins leading-normal text-3xl lg:text-5xl font-semibold bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent"
             >
               Services
             </a>
             <a
-              href="#Pricing"
+              href="#"
               className="text-right font-poppins  leading-normal text-3xl lg:text-5xl font-semibold bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent"
             >
               Pricing
@@ -129,19 +144,19 @@ export default function MenuContent({ isMenuOpen }) {
               Works
             </Link>
             <a
-              href="#About"
+              href="#"
               className="text-right font-poppins  leading-normal text-3xl lg:text-5xl font-semibold bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent"
             >
               About
             </a>
             <a
-              href="#Blogs"
+              href="#"
               className="text-right font-poppins  leading-normal text-3xl lg:text-5xl font-semibold bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent"
             >
               Blogs
             </a>
             <a
-              href="#Career"
+              href="#"
               className="text-right font-poppins  leading-normal text-3xl lg:text-5xl font-semibold bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent"
             >
               Career

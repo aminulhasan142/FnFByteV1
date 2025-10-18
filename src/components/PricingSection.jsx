@@ -83,8 +83,9 @@ export default function PricingSection() {
           </div>
           {/* cta button */}
           <a
-            href="#call"
-            className="flex py-3 px-6 justify-center items-center self-stretch rounded-xl border border-border bg-container-gray2 text-white text-sm font-bold font-poppins"
+            href="https://cal.com/fnfbyte/30min?overlayCalendar=true"
+            target="_blank"
+            className="flex py-3 px-6 justify-center items-center self-stretch rounded-xl border border-border bg-container-gray2 hover:bg-container-gray2/50 transition-colors duration-500 text-white text-sm font-bold font-poppins"
           >
             Book a Call
           </a>
@@ -158,8 +159,9 @@ export default function PricingSection() {
           </div>
           {/* cta button */}
           <a
-            href="#call"
-            className="flex py-3 px-6 justify-center items-center self-stretch rounded-xl bg-surface-brand border border-border  text-white text-sm font-bold font-poppins"
+            href="https://cal.com/fnfbyte/30min?overlayCalendar=true"
+            target="_blank"
+            className="flex py-3 px-6 justify-center items-center self-stretch rounded-xl bg-surface-brand border hover:bg-surface-brand/80 transition-colors duration-500 border-border  text-white text-sm font-bold font-poppins"
           >
             Book a Call
           </a>
@@ -230,8 +232,9 @@ export default function PricingSection() {
           </div>
           {/* cta button */}
           <a
-            href="#call"
-            className="flex py-3 px-6 justify-center items-center self-stretch rounded-xl border border-border bg-container-gray2 text-white text-sm font-bold font-poppins"
+            href="https://cal.com/fnfbyte/30min?overlayCalendar=true"
+            target="_blank"
+            className="flex py-3 px-6 justify-center items-center self-stretch rounded-xl border border-border bg-container-gray2 hover:bg-container-gray2/50 transition-colors duration-500 text-white text-sm font-bold font-poppins"
           >
             Book a Call
           </a>

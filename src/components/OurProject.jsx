@@ -19,7 +19,6 @@ export default function OurProject() {
           </p>
           <Button
             children={"Browse Projects"}
-            url={"#projects"}
             className="w-full md:w-fit"
             bgColor="bg-surface-brand hover:bg-surface-brand/80"
           />
