@@ -7,12 +7,13 @@ import {
 } from "react-icons/fa";
 import { FaBehance, FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function MenuContent({ isMenuOpen }) {
   return (
     <div
       className={`w-full h-full flex justify-center items-center  backdrop-blur-md bg-navbar fixed
-      } top-2 z-30 mt-16 transition-transform duration-300 ease-in-out transform 
+      } top-2 z-30 transition-transform duration-300 ease-in-out transform 
           ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
     >
       <div className="flex max-w-[1440px] w-full flex-col-reverse md:flex-row-reverse lg:flex-row px-8 lg:px-16 items-start justify-between">
@@ -121,12 +122,12 @@ export default function MenuContent({ isMenuOpen }) {
             >
               Pricing
             </a>
-            <a
-              href="#Works"
+            <Link
+              to="/work"
               className="text-right font-poppins  leading-normal text-3xl lg:text-5xl font-semibold bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent"
             >
               Works
-            </a>
+            </Link>
             <a
               href="#About"
               className="text-right font-poppins  leading-normal text-3xl lg:text-5xl font-semibold bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent"

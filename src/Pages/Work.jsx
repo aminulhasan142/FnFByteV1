@@ -61,7 +61,7 @@ export default function Work() {
 
   return (
     <div className="pt-16 flex w-full justify-center px-2">
-      <div className="flex max-w-[1440px] px-4 lg:px-16 pt-12 lg:pt-20 flex-col justify-center items-center gap-3">
+      <div className="flex max-w-[1440px] w-full px-4 lg:px-0 pt-12 lg:pt-20 flex-col justify-center items-center gap-3">
         {/* page pagination */}
         <div className="flex py-2.5 px-4 justify-center items-center gap-1 border border-border rounded-full">
           <Link

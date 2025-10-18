@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { MdDone, MdOutlineMonetizationOn } from "react-icons/md";
 import HeadingGradientText from "./HeadingGradientText";
 import TagText from "./TagText";
@@ -10,6 +11,7 @@ import VectorSvg2 from "/src/assets/vector2.svg";
 import VectorSvg3 from "/src/assets/vector3.svg";
 
 export default function PricingSection() {
+  const [isMonthly, setIsMonthly] = useState(false);
   return (
     <>
       {/* Pricing first summary card */}
@@ -26,10 +28,20 @@ export default function PricingSection() {
               goals and budget.
             </p>
             <div className="flex p-1 items-center  gap-0.5 rounded-2xl border border-border backdrop-blur-xl">
-              <button className="flex py-3 px-4 justify-center items-center gap-1 rounded-xl bg-surface-brand text-white font-poppins text-sm font-bold cursor-pointer">
+              <button
+                onClick={() => setIsMonthly(false)}
+                className={`flex py-3 px-4 justify-center items-center gap-1 rounded-xl font-poppins text-sm font-bold cursor-pointer ${
+                  isMonthly ? "text-zinc-400" : "bg-surface-brand text-white"
+                }`}
+              >
                 Project Wise
               </button>
-              <button className="flex py-3 px-4 justify-center items-center gap-1 rounded-xl  text-zinc-400 font-poppins text-sm font-bold cursor-pointer">
+              <button
+                onClick={() => setIsMonthly(true)}
+                className={`flex py-3 px-4 justify-center items-center gap-1 rounded-xl  font-poppins text-sm font-bold cursor-pointer ${
+                  isMonthly ? "bg-surface-brand text-white" : "text-zinc-400"
+                }`}
+              >
                 Monthly
               </button>
             </div>
@@ -63,7 +75,7 @@ export default function PricingSection() {
           {/* Pricing text */}
           <div className="flex w-full justify-start items-center">
             <h1 className="text-white font-poppins text-3xl font-bold">
-              $40
+              ${isMonthly ? "30" : "40"}
               <span className="text-white font-poppins text-sm font-normal ">
                 /HOUR
               </span>
@@ -138,7 +150,7 @@ export default function PricingSection() {
           {/* Pricing text */}
           <div className="flex w-full justify-start items-center">
             <h1 className="text-white font-poppins text-3xl font-bold">
-              $1500
+              ${isMonthly ? "1400" : "1500"}
               <span className="text-white font-poppins text-sm font-normal ">
                 /HOUR
               </span>
@@ -210,7 +222,7 @@ export default function PricingSection() {
           {/* Pricing text */}
           <div className="flex w-full justify-start items-center">
             <h1 className="text-white font-poppins text-3xl font-bold">
-              $5000
+              ${isMonthly ? "4900" : "5000"}
               <span className="text-white font-poppins text-sm font-normal ">
                 /HOUR
               </span>
