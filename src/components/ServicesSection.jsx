@@ -69,7 +69,7 @@ export default function ServicesSection() {
                 {/* button */}
                 <div className={`flex items-center justify-center`}>
                   <a
-                    href="#link"
+                    href="#"
                     className={`moving_arrow_button p-3 rounded-full transition ease-out duration-500  text-white font-First font-bold gap-1 text-sm self-center justify-center items-center flex  bg-slate-800`}
                   >
                     <div className="flex flex-col h-5 w-6 relative overflow-hidden">
@@ -167,7 +167,7 @@ export default function ServicesSection() {
                 {/* button */}
                 <div className={`flex items-center justify-center`}>
                   <a
-                    href="#link"
+                    href="#"
                     className={`moving_arrow_button p-3 rounded-full transition ease-out duration-500  text-white font-First font-bold gap-1 text-sm self-center justify-center items-center flex  bg-slate-800`}
                   >
                     <div className="flex flex-col h-5 w-6 relative overflow-hidden">
@@ -242,7 +242,7 @@ export default function ServicesSection() {
                 {/* button */}
                 <div className={`flex items-center justify-center`}>
                   <a
-                    href="#link"
+                    href="#"
                     className={`moving_arrow_button p-3 rounded-full transition ease-out duration-500  text-white font-First font-bold gap-1 text-sm self-center justify-center items-center flex  bg-slate-800`}
                   >
                     <div className="flex flex-col h-5 w-6 relative overflow-hidden">
