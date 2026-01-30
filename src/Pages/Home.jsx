@@ -25,21 +25,25 @@ export default function Home() {
           <div className="flex flex-col max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-3">
             <OurProject />
           </div>
-          {/* Project Cards */}
-          <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#BF6235] from-0% to-[#7A4A42] to-100%">
-            <ProjectShowCard />
-          </div>
-          {/* Project Cards 01*/}
-          <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#16FFE2] from-0% via-[#2A99F3] via-17% to-[#0A02E7] to-100%">
-            <ProjectShowCard01 />
-          </div>
-          {/* Project Cards 02*/}
-          <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#02ACCA] from-0% to-[#026691] to-100%">
-            <ProjectShowCard02 />
-          </div>
-          {/* Project Cards 03*/}
-          <div className="flex flex-col-reverse lg:flex-row max-w-[1440px] w-full rounded-3xl bg-linear-[135deg] from-[#6B73FF] from-0% to-[#000DFF] to-100%">
-            <ProjectShowCard03 />
+
+          {/* Project Card show Container */}
+          <div className="flex flex-col gap-2">
+            {/* Project Cards */}
+            <div className="lg:sticky top-[80px] flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#BF6235] from-0% to-[#7A4A42] to-100%">
+              <ProjectShowCard />
+            </div>
+            {/* Project Cards 01*/}
+            <div className="lg:sticky top-[105px] flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#16FFE2] from-0% via-[#2A99F3] via-17% to-[#0A02E7] to-100%">
+              <ProjectShowCard01 />
+            </div>
+            {/* Project Cards 02*/}
+            <div className="lg:sticky top-[123px] flex flex-col-reverse lg:flex-row max-w-[1440px] w-full p-2 rounded-3xl bg-linear-[135deg] from-[#02ACCA] from-0% to-[#026691] to-100%">
+              <ProjectShowCard02 />
+            </div>
+            {/* Project Cards 03*/}
+            <div className="lg:sticky top-[500px] flex flex-col-reverse lg:flex-row max-w-[1440px] w-full rounded-3xl bg-linear-[135deg] from-[#6B73FF] from-0% to-[#000DFF] to-100%">
+              <ProjectShowCard03 />
+            </div>
           </div>
 
           {/* Service Section */}

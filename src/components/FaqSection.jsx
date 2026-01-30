@@ -37,9 +37,9 @@ export default function FaqSection() {
         if (q.id === questionID) {
           return { ...q, status: !q.status };
         } else {
-          return q;
+          return { ...q, status: false };
         }
-      })
+      }),
     );
   }
   return (
