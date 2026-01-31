@@ -2,8 +2,8 @@ import { MdNewspaper } from "react-icons/md";
 import Button from "./Button";
 import HeadingGradientText from "./HeadingGradientText";
 import TagText from "./TagText";
-import ArticleImg1 from "/src/assets/ArticleImage1.svg";
-import ArticleImg2 from "/src/assets/ArticleImage2.svg";
+import ArticleImg1 from "/src/assets/ArticleImage1.png";
+import ArticleImg2 from "/src/assets/ArticleImage2.png";
 
 export default function ArticleSection() {
   return (
