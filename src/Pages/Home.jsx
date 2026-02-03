@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-center">
-        <div className="flex flex-col px-2 gap-2">
+        <div className="flex flex-col px-2 gap-1">
           <div className="mt-[72px] flex max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-center rounded-3xl bg-linear-[180deg] from-container-gray1 to-container-gray2">
             <Hero />
           </div>

@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
-import { LuSettings2 } from "react-icons/lu";
 import { Link } from "react-router-dom";
+// Ensure these paths match your project structure
 import CardImage2 from "../assets/cardImg (1).png";
 import CardImage3 from "../assets/cardImg (2).png";
 import CardImage1 from "../assets/cardImg.png";
 import Button from "../components/Button";
-import FilterTagText from "../components/FilterTagText";
 import TagText from "../components/TagText";
 
+// 1. DATA CONFIGURATION
 const CardListItems = [
   {
     id: 1,
@@ -38,7 +38,6 @@ const CardListItems = [
     title: "Salescare - Supply chain Management System",
     link: "#somewhare",
   },
-
   {
     id: 5,
     img: CardImage2,
@@ -55,9 +54,55 @@ const CardListItems = [
   },
 ];
 
+// 2. FILTER CONFIGURATION
+// We map the "label" (UI text) to the "value" (Tag in CardListItems)
+const serviceFilters = [
+  { label: "MVP(12)", value: "MVP" },
+  { label: "UI/UX Design(25)", value: "UI/UX Design" },
+  { label: "Mobile App Development(2)", value: "Mobile App" }, // Mapped to match data
+  { label: "Web Development(13)", value: "Web App" }, // Mapped to match data
+];
+
+const industryFilters = [
+  { label: "SaaS(7)", value: "SaaS" },
+  { label: "AI/ML(5)", value: "AI/ML" },
+  { label: "Healthcare(2)", value: "Healthcare" },
+  { label: "Edtech(3)", value: "Edtech" },
+  { label: "Others(4)", value: "Others" },
+];
+
 export default function Work() {
   const [showMore1, setShowMore1] = useState(true);
   const [showMore2, setShowMore2] = useState(true);
+
+  // State to hold selected tags
+  const [activeFilters, setActiveFilters] = useState([]);
+
+  // 3. HANDLER FUNCTIONS
+  const handleFilterClick = (tagValue) => {
+    // If "All" is clicked, clear filters
+    if (tagValue === "All") {
+      setActiveFilters([]);
+      return;
+    }
+
+    // Toggle logic: If tag exists, remove it; otherwise, add it
+    if (activeFilters.includes(tagValue)) {
+      setActiveFilters(activeFilters.filter((t) => t !== tagValue));
+    } else {
+      setActiveFilters([...activeFilters, tagValue]);
+    }
+  };
+
+  // 4. FILTER LOGIC
+  const filteredItems = CardListItems.filter((item) => {
+    // If no filters are active, show all items
+    if (activeFilters.length === 0) return true;
+
+    // Show item ONLY if it contains ALL selected tags (Intersection)
+    // If you want "OR" logic (match ANY tag), change .every() to .some()
+    return activeFilters.every((filter) => item.tags.includes(filter));
+  });
 
   return (
     <div className="pt-16 flex w-full justify-center px-2">
@@ -84,88 +129,68 @@ export default function Work() {
           Our Work, <br /> Your Success
         </h1>
 
-        {/* Case Studies Main Container */}
-
         <div className="flex flex-col lg:flex-row w-full items-start gap-1 self-start py-16 lg:py-24">
-          {/* sticky container for filtering  */}
-
-          {/* content box for small screen */}
-          <div className="flex lg:hidden max-w-[280px] xsm:max-w-[370px] sm:max-w-[480px] md:max-w-[720px] justify-center items-center">
-            <div className="flex overflow-x-auto whitespace-nowrap space-x-4 p-2">
-              <button className="flex px-5 py-3 justify-center items-center border border-border rounded-2xl bg-[#7a1efa33] text-sm font-poppins font-semibold text-indigo-400 gap-1">
-                <LuSettings2 />
-                Filter
-              </button>
-              <FilterTagText>All Services</FilterTagText>
-              <FilterTagText>MVP(12)</FilterTagText>
-              <FilterTagText>UI/UX Design(25)</FilterTagText>
-              <FilterTagText>Mobile App Development(2)</FilterTagText>
-              <FilterTagText>Web Development(13)</FilterTagText>
-              <FilterTagText>SaaS(7)</FilterTagText>
-              <FilterTagText>AI/ML(5)</FilterTagText>
-              <FilterTagText>Healthcare(2)</FilterTagText>
-              <FilterTagText>Edtech(3)</FilterTagText>
-              <FilterTagText>Others(4)</FilterTagText>
-            </div>
-          </div>
-
-          {/* content box for large screen */}
-          <div className="hidden lg:flex max-w-[30%] sticky top-[72px]  flex-col p-8 items-start self-start gap-8 rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
-            {/* service section */}
+          {/* --- SIDEBAR --- */}
+          <div className="hidden lg:flex max-w-[30%] sticky top-[72px] flex-col p-8 items-start self-start gap-8 rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1">
+            {/* SERVICE SECTION */}
             <div className="flex flex-col justify-center items-center gap-2.5 self-stretch">
-              {/* title container */}
               <button
                 onClick={() => setShowMore1(!showMore1)}
                 className="flex justify-between items-center self-stretch cursor-pointer"
               >
-                {/* title */}
                 <h1 className="text-xl not-italic font-bold uppercase bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent text-left">
                   services
                 </h1>
-
                 <span className="flex p-1.5 justify-center items-center gap-0.5 rounded-2xl border border-border text-2xl text-zinc-400 backdrop-blur-3xl bg-white/4">
                   <IoIosArrowDown
                     className={`${showMore1 ? "rotate-180" : "rotate-0"}`}
                   />
                 </span>
               </button>
-              {/* tag container */}
+
               <div
-                className={` overflow-hidden transition-all duration-300 ease-in-out ${
-                  showMore1 ? "max-h-max" : "h-0"
-                }`}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${showMore1 ? "max-h-max" : "h-0"}`}
               >
                 <div className="flex items-start content-start gap-2 self-stretch flex-wrap">
-                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl bg-[#7a1efa33] text-sm font-poppins font-semibold text-indigo-400 cursor-pointer transition-colors">
+                  {/* All Button */}
+                  <button
+                    onClick={() => handleFilterClick("All")}
+                    className={`flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl text-sm font-poppins font-semibold cursor-pointer transition-colors ${
+                      activeFilters.length === 0
+                        ? "bg-[#7a1efa33] text-indigo-400"
+                        : "text-white hover:bg-[#7a1efa33]"
+                    }`}
+                  >
                     All Services
                   </button>
-                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                    MVP(12)
-                  </button>
-                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                    UI/UX Design(25)
-                  </button>
-                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                    Mobile App Development(2)
-                  </button>
-                  <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                    Web Development(13)
-                  </button>
+
+                  {/* Dynamic Service Buttons */}
+                  {serviceFilters.map((filter) => (
+                    <button
+                      key={filter.value}
+                      onClick={() => handleFilterClick(filter.value)}
+                      className={`flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl text-sm font-poppins font-semibold cursor-pointer transition-colors ${
+                        activeFilters.includes(filter.value)
+                          ? "bg-[#7a1efa33] text-indigo-400"
+                          : "text-white hover:bg-[#7a1efa33]"
+                      }`}
+                    >
+                      {filter.label}
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
-            {/* industries section */}
+
+            {/* INDUSTRIES SECTION */}
             <div className="flex flex-col justify-center items-center gap-2.5 self-stretch">
-              {/* title container */}
               <button
                 onClick={() => setShowMore2(!showMore2)}
                 className="flex justify-between items-center self-stretch cursor-pointer"
               >
-                {/* title */}
                 <h1 className="text-xl not-italic font-bold uppercase bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent text-left">
                   industries
                 </h1>
-
                 <span
                   className={`flex p-1.5 justify-center items-center gap-0.5 rounded-2xl border border-border text-2xl text-zinc-400 backdrop-blur-3xl bg-white/4 transition-transform duration-300 ease-in-out`}
                 >
@@ -174,43 +199,43 @@ export default function Work() {
                   />
                 </span>
               </button>
-              {/* tag container */}
+
               <div
-                className={`flex items-start content-start gap-2  self-stretch flex-wrap overflow-hidden transition-transform duration-300 ease-in-out ${
-                  showMore2 ? "max-h-max" : "h-0"
-                }`}
+                className={`flex items-start content-start gap-2 self-stretch flex-wrap overflow-hidden transition-transform duration-300 ease-in-out ${showMore2 ? "max-h-max" : "h-0"}`}
               >
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl bg-[#7a1efa33]  text-sm font-poppins font-semibold text-indigo-400 cursor-pointer transition-colors">
+                <button
+                  onClick={() => handleFilterClick("All")}
+                  className={`flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl text-sm font-poppins font-semibold cursor-pointer transition-colors ${
+                    activeFilters.length === 0
+                      ? "bg-[#7a1efa33] text-indigo-400"
+                      : "text-white hover:bg-[#7a1efa33]"
+                  }`}
+                >
                   All Industries
                 </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  SaaS(7)
-                </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  AI/ML (5)
-                </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  Healthcare(2)
-                </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  Edtech(3)
-                </button>
-                <button className="flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl active:bg-[#7a1efa33] text-white text-sm font-poppins font-semibold active:text-indigo-400 cursor-pointer transition-colors">
-                  Others(4)
-                </button>
+
+                {/* Dynamic Industry Buttons */}
+                {industryFilters.map((filter) => (
+                  <button
+                    key={filter.value}
+                    onClick={() => handleFilterClick(filter.value)}
+                    className={`flex px-5 py-3 justify-center items-center gap-0.5 border border-border rounded-2xl text-sm font-poppins font-semibold cursor-pointer transition-colors ${
+                      activeFilters.includes(filter.value)
+                        ? "bg-[#7a1efa33] text-indigo-400"
+                        : "text-white hover:bg-[#7a1efa33]"
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                ))}
               </div>
             </div>
 
-            {/* have a project */}
-            <div
-              className="flex flex-col justify-center items-start gap-4 self-stretch
-            "
-            >
-              {/* title */}
+            {/* Call to Action */}
+            <div className="flex flex-col justify-center items-start gap-4 self-stretch">
               <h1 className="text-xl not-italic font-bold uppercase bg-linear-[135deg] from-[#43CBFF] from-0% to-[#9708CC] to-100% bg-clip-text text-transparent text-left">
                 have a project ?
               </h1>
-
               <Button
                 url={"#contact"}
                 bgColor={"bg-surface-brand hover:bg-surface-brand/80"}
@@ -220,27 +245,35 @@ export default function Work() {
             </div>
           </div>
 
-          {/* card container */}
+          {/* --- CARD GRID --- */}
           <div className="w-[100%] lg:max-w-[70%] grid grid-cols-1 lg:grid-cols-2 items-start gap-2 self-stretch">
-            {CardListItems.map((item) => (
-              <a
-                href={item.link}
-                key={item.id}
-                className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 hover:to-container-gray2 transition-colors duration-500"
-              >
-                <img src={item.img} alt="Card Image" className="w-full" />
-                <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch ">
-                  <div className="flex flex-wrap gap-1">
-                    {item.tags.map((tag) => (
-                      <TagText text={tag} />
-                    ))}
+            {/* We map over filteredItems instead of CardListItems */}
+            {filteredItems.length > 0 ? (
+              filteredItems.map((item) => (
+                <a
+                  href={item.link}
+                  key={item.id}
+                  className="flex p-3 flex-col justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 hover:to-container-gray2 transition-colors duration-500"
+                >
+                  <img src={item.img} alt="Card Image" className="w-full" />
+                  <div className="flex flex-col p-3 justify-center items-start gap-2 self-stretch">
+                    <div className="flex flex-wrap gap-1">
+                      {item.tags.map((tag, index) => (
+                        <TagText key={index} text={tag} />
+                      ))}
+                    </div>
+                    <h1 className="text-white font-urbanist text-xl font-black capitalize">
+                      {item.title}
+                    </h1>
                   </div>
-                  <h1 className="text-white font-urbanist text-xl font-black capitalize">
-                    {item.title}
-                  </h1>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))
+            ) : (
+              // Fallback if no items match
+              <div className="col-span-1 lg:col-span-2 text-center py-10 text-white/50">
+                <p>No projects match the selected filters.</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -67,7 +67,7 @@ export default function FaqSection() {
           {arrow.map((q) => (
             <div
               key={q.id}
-              className="flex p-6 items-center gap-4 self-stretch rounded-2xl border border-border cursor-pointer justify-between"
+              className="flex p-6 items-center gap-4 self-stretch rounded-2xl border border-border cursor-pointer justify-between hover:bg-slate-800 hover:transition-all"
               onClick={() => {
                 handleClick(q.id);
               }}
@@ -86,7 +86,7 @@ export default function FaqSection() {
                 </p>
               </div>
               {/* icons */}
-              <span className="flex p-2 items-center justify-center rounded-full bg-container-gray2">
+              <span className="flex p-2 items-center self-start justify-center rounded-full bg-container-gray2">
                 {q.status ? (
                   <IoIosArrowUp className="text-white" />
                 ) : (
