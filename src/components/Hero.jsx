@@ -1,5 +1,5 @@
+import { HashLink as Link } from "react-router-hash-link";
 import Button from "./Button";
-import TransparentButton from "./TransparentButton";
 import BlurElement from "/src/assets/BlurElement.jsx";
 import HeroBanner from "/src/assets/Embed.png";
 
@@ -20,11 +20,18 @@ export default function Hero() {
         </div>
         {/* title CTA */}
         <div className="flex flex-col md:flex-row w-full items-center gap-2 relative">
-          <TransparentButton
+          <Link
+            smooth
+            to="#pricingSection"
+            className="flex px-4 h-[44px] justify-center items-center bg-menu hover:bg-menu-hover duration-500 border border-zinc-400/5 backdrop-blur-[20px] rounded-xl transition-colors cursor-pointer text-white font-poppins text-sm font-bold leading-normal w-fit md:w-fit"
+          >
+            Starting at $500/Project
+          </Link>
+          {/* <TransparentButton
             children={"Starting at $500/Project"}
             className="w-full md:w-fit"
-            url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}
-          />
+            url={"#pricingSection"}
+          /> */}
           <Button
             children={"Let’s Talk"}
             url={"https://cal.com/fnfbyte/30min?overlayCalendar=true"}

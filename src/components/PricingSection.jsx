@@ -15,7 +15,10 @@ export default function PricingSection() {
   return (
     <>
       {/* Pricing first summary card */}
-      <div className="flex flex-col max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-3">
+      <section
+        id="pricingSection"
+        className="flex flex-col max-w-[1440px] w-full pt-2 md:pt-20 px-2 md:px-12 lg:px-16 pb-3 md:pb-16 justify-center items-start rounded-3xl bg-linear-[180deg] from-container-gray2 to-container-gray1 gap-3"
+      >
         <TagText text="Pricing">
           <MdOutlineMonetizationOn className="text-zinc-400" />
         </TagText>
@@ -47,7 +50,7 @@ export default function PricingSection() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* pricing cards */}
       <div className="flex flex-col max-w-[1440px] w-full lg:flex-row items-center gap-1 self-stretch">
